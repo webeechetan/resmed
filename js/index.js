@@ -1,9 +1,21 @@
 $(document).ready(function() {
     $(".draggable_icon").draggable({
         revert:true,
+        start : function(event,ui){
+            ui.helper.removeClass('box_icon');
+            ui.helper.addClass('drag_start');
+        },
+        stop : function(event,ui){
+            ui.helper.removeClass('drag_start');
+            ui.helper.addClass('box_icon');
+        }
     });
     $(".droppable_icon").droppable({
         accept: ".draggable_icon",
+        classes: {
+            // "ui-droppable-active": "highlight_droppable",
+            "ui-droppable-hover": "dragged_item_hover"
+          },
         drop: function( event, ui ) {
             // ui.draggable.draggable({revert:false});
             ui.draggable.draggable({disabled: true});

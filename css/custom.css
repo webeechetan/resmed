@@ -30,5 +30,34 @@
     text-align: center;
 }
 
+.drag_start{
+    border-radius: 10px;
+    background-color: rgb(218, 67, 47);
+    margin-left: auto;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+
+.dragged_item_hover{
+    background-color: rgb(16, 254, 8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.highlight_droppable{
+    border: dotted;
+    border-color: black;
+}
+
+.test{
+    background-color: rgb(16, 254, 8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: dotted;
+    border-color: darkorange;
+}
 
 
