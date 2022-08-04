@@ -15,57 +15,91 @@
 </head>
 
 <body>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="row">
-                    <h4>Drag</h4>
-                    <div class="col-md-6 box_icon draggable_icon">Wake Up</div>
-                    <div class="col-md-6 box_icon draggable_icon">Exercise</div>
-                    <div class="col-md-6 box_icon draggable_icon">Breakfast</div>
-                    <div class="col-md-6 box_icon draggable_icon">Office</div>
-                    <!-- <div class="col-md-6 test">
-                        Test
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="text-center">
-                    <h4>The Perfect Sleep Shedule</h4>
-                    <img src="https://placehold.jp/3d4070/ffffff/150x150.png" alt="" class="result_image">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="row ">
-                    <h4>Drop</h4>
-                    <div class="col-md-12 box_icon droppable_icon">
-                        06:00
-                        <div class="dropped_items">
-                            
+    <div class="section_one">
+        <div class="container text-center">
+            <button type="button" class="btn btn-primary play_game_btn">Start Game</button>
+        </div>
+    </div>
+
+    <div class="section_two">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <h4>Drag</h4>
+                        <div class="col-md-6 box_icon draggable_icon" data-task = 'bedtime' data-submit="false">
+                            <img src="./assets/Assets/Asset 36.png" data-task = 'bedtime'>
                         </div>
-                    </div>
-                    <div class="col-md-12 box_icon droppable_icon">
-                        08:00
-                        <div class="dropped_items">
-                            
+                        <div class="col-md-6 box_icon draggable_icon" data-task = 'party' data-submit="false" >
+                            <img src="./assets/Assets/Asset 38.png" data-task = 'party'>
                         </div>
-                    </div>
-                    <div class="col-md-12 box_icon droppable_icon">
-                        10:00
-                        <div class="dropped_items">
-                            
+                        <div class="col-md-6 box_icon draggable_icon" data-task = 'exercise' data-submit="false">
+                            <img src="./assets/Assets/Asset 35.png" data-task = 'exercise'>
                         </div>
-                    </div>
-                    <div class="col-md-12 box_icon droppable_icon">
-                        12:00
-                        <div class="dropped_items">
+                        <div class="col-md-6 box_icon draggable_icon" data-task = 'tv-ott' data-submit="false">
+                            <img src="./assets/Assets/Asset 31.png" data-task = 'tv-ott'>
+                        </div>
+                        <div class="col-md-6 box_icon draggable_icon" data-task = 'sleep' data-submit="false">
+                            <img src="./assets/Assets/Asset 34.png" data-task = 'sleep'>
+                        </div>
+                        <div class="col-md-6 box_icon draggable_icon" data-task = 'dinner' data-submit="false">
+                            <img src="./assets/Assets/Asset 37.png" data-task = 'dinner'>
+                        </div>
+                        <div class="col-md-6 box_icon draggable_icon" data-task = 'tea' data-submit="false">
+                            <img src="./assets/Assets/Asset 33.png" data-task = 'tea'>
+                        </div>
+                        <div class="col-md-6 box_icon draggable_icon" data-task = 'walk' data-submit="false">
+                            <img src="./assets/Assets/Asset 32.png" data-task = 'walk'>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <button class="btn btn-primary" onclick="submit_shedule()">Submit Your Shedule</button>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <h4>The Perfect Sleep Shedule</h4>
+                        <img src="https://placehold.jp/3d4070/ffffff/150x150.png" alt="" class="result_image">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row ">
+                        <h4>Drop</h4>
+                        <div class="col-md-12 box_icon droppable_icon">
+                            <span class="timings" data-time="6pm">6 PM</span>
+                            <div class="dropped_items"></div>
+                        </div>
+                        <div class="col-md-12 box_icon droppable_icon">
+                            <span class="timings" data-time="7pm">7 PM</span>
+                            <div class="dropped_items"></div>
+                        </div>
+                        <div class="col-md-12 box_icon droppable_icon">
+                            <span class="timings" data-time="8pm">8 PM</span>
+                            <div class="dropped_items"></div>
+                        </div>
+                        <div class="col-md-12 box_icon droppable_icon">
+                            <span class="timings" data-time="9pm">9 PM</span>
+                            <div class="dropped_items"></div>
+                        </div>
+                        <div class="col-md-12 box_icon droppable_icon">
+                            <span class="timings" data-time="10pm">10 PM</span>
+                            <div class="dropped_items"></div>
+                        </div>
+                        <div class="col-md-12 box_icon droppable_icon">
+                            <span class="timings" data-time="12pm">12 PM</span>
+                            <div class="dropped_items"></div>
+                        </div>
+                        <div class="col-md-12 box_icon droppable_icon">
+                            <span class="timings" data-time="2am">2 AM</span>
+                            <div class="dropped_items"></div>
+                        </div>
+                        <div class="col-md-12 box_icon droppable_icon">
+                            <span class="timings" data-time="4pm">4 AM</span>
+                            <div class="dropped_items"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary" onclick="submit_shedule()">Submit Your Shedule</button>
+                    </div>
                 </div>
             </div>
         </div>

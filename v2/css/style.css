@@ -1,0 +1,127 @@
+/******** start img css*********************/
+.sec-space{
+ margin-top: 60px;
+ margin-bottom: 60px;
+}
+body{
+    overflow-x: hidden;
+}
+.schedule-creation{
+    background-image: url(../Assets/Asset/BG_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+.start-button{  
+    position: absolute;
+    bottom: 50%;
+    right: 0%;
+}
+.start-button img{
+    width: 16%;
+}
+.schedule-perfect{
+    background-image: url(..//Assets/Asset/start-game-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%; 
+}
+
+.perfect img {
+    width: 30%;
+}
+.drag-btn li{
+    width: 50%;
+    margin-top: 15px;
+}
+.drag-btn li img{
+    width: 100px;
+    
+}
+.drag-btn{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+   
+}
+.final-result{
+    background-color: #821C70;
+    height: 100vh;
+    width: 100%;
+}
+.mr-top{
+    margin-top: -10rem;
+}
+.mr-top img{
+    width: 70%;
+}
+
+/* V1 */
+
+.box_icon{
+    
+}
+
+.timing_box{
+    background-color: aquamarine;
+    height: 40px;
+    margin-top: 5px;    
+}
+
+/* .dropped_items{
+    border-radius: 20px;
+    background-color:  rgb(61 65 51);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5px;
+} */
+
+.dropped_items img{
+    height: 40px;
+}
+
+.dragged_done{
+    border-radius: 10px;
+    background-color: rgb(148, 175, 224);
+    margin-left: auto;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+
+.drag_start{
+    border-radius: 10px;
+    /* background-color: rgb(218, 67, 47); */
+    margin-top: 5px;
+}
+
+.dragged_item_hover{
+    background-color: rgb(16, 254, 8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.highlight_droppable{
+    border: dotted;
+    border-color: black;
+}
+
+.test{
+    background-color: rgb(16, 254, 8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: dotted;
+    border-color: darkorange;
+}
+
+.required{
+    border: 4px solid red;
+}
+
+
+
+    

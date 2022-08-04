@@ -3,14 +3,15 @@ $(document).ready(function() {
                         Hiding section two on page load
     ------------------------------------------------------------------ */
     $(".section_two").hide();
+    $(".section_three").hide();
 
 
     /*----------------------------------------------------------------
         Hiding section one and showing section two on play btn click
     ------------------------------------------------------------------ */
     $(".play_game_btn").click(function(e){
-        $(".section_one").hide('slow');
-        $(".section_two").show('fold',2000);
+        $(".section_one").hide();
+        $(".section_two").show();
     });
 
 
@@ -41,6 +42,7 @@ $(document).ready(function() {
             "ui-droppable-hover": "dragged_item_hover"
           },
         drop: function( event, ui ) {
+            console.log(ui)
             // ui.draggable.draggable({revert:false});
             ui.draggable.draggable({disabled: true});
             let dropped_item = $(this).find(".dropped_items");
@@ -79,9 +81,9 @@ function validate(){
                         Submit shedule 
 ------------------------------------------------------------------ */
 function submit_shedule(){
-    if(!validate()){
-         return false;
-    }
+    // if(!validate()){
+    //      return false;
+    // }
     let green = 0;
     let yellow = 0;
     let red = 0;
@@ -93,7 +95,7 @@ function submit_shedule(){
         let slot = {time:time.attr('data-time'),task:task.attr('data-task')};
         activities.push(slot)
     })
-
+    console.log(activities)
     for(x of activities){
 
         // bedtime
@@ -184,7 +186,7 @@ function submit_shedule(){
 
     }
     console.log('Red '+red);
-    console.log('Yello '+yellow);
+    console.log('Yellow '+yellow);
     console.log('Green '+green);
     
 }
