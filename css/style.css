@@ -55,7 +55,7 @@ img {
 .btn-primary.btn-big {
     font-size: 20px;
 }
-.btn-primary:hover, .btn-primary:focus {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     outline: none;
     background-color: var(--secondary);
     border: 1px solid var(--secondary);
@@ -213,7 +213,7 @@ header {
 }
 @media (max-width: 575px) {
     .form-box {
-        padding: 55px 35px 30px;
+        padding: 15px;
     }
 }
 .main-form {
@@ -266,14 +266,20 @@ header {
 /* ===== Game ===== */
 .game-wrap {
     width: 991px;
+    max-width: 100%;
     margin: auto;
 }
 .schedule-creation {
     background-image: url(../images/start-game-bg.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center center;
     position: relative;
+    min-height: 625px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .start-button img {
     width: 200px;
@@ -281,14 +287,14 @@ header {
 }
 .start-text1 {
     width: 500px;
-    margin: auto;
+    margin: 0 auto;
 }
 .schedule-perfect {
     background-image: url(../images/start-game-bg2.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center center;
-    height: 100%; 
+    min-height: 625px; 
 }
 .perfect img {
     width: 30%;
@@ -311,6 +317,10 @@ header {
 .final-result {
     background-color: #821C70;
     width: 100%;
+    min-height: 625px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .timing_box {
     background-color: aquamarine;
@@ -329,11 +339,8 @@ header {
 }
 .newsletter-item {
     display: flex;
-    width: 350px;
     background: #fff;
-    padding: 30px;
     border-radius: 130px 35px 100px 35px/15px 225px 15px 255px;
-    position: relative;
 }
 .newsletter-item .form-control {
     min-height: 50px;
@@ -345,4 +352,79 @@ header {
     right: 20px;
     font-size: 14px;
     cursor: pointer;
+}
+.result-card {
+    width: 275px;
+    position: relative;
+    margin: auto;
+}
+.disc-btn {
+    width: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 50px;
+    cursor: pointer;
+}
+.modal-content {
+    border-radius: var(--radius-shape);
+    padding: 30px;
+}
+.modal-header, .modal-body {
+    padding: 0;
+    border: none;
+}
+.game-disc {
+    width: 991px;
+    max-width: 100%;
+    margin: 30px auto 0;
+}
+@media (max-width: 991px) {
+    .game-wrap {
+        width: 750px;
+    }
+    .schedule-creation, .schedule-perfect {
+        min-height: 500px;
+    }
+}
+@media (max-width: 767px) {
+    .game-wrap {
+        width: 550px;
+    }
+    .schedule-creation, .schedule-perfect {
+        min-height: 400px;
+        padding: 30px;
+    }
+    .drag-img {
+        width: 75px;
+    }
+    .drag-btn li {
+        padding: 5px;
+        margin: 0;
+    }
+}
+@media (max-width: 575px) {
+    .btn-primary {
+        padding: 7px 15px;
+        font-size: 12px
+    }
+    .start-button img {
+        width: 125px;
+    }
+    .schedule-perfect {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .schedule-creation, .schedule-perfect {
+        min-height: 350px;
+        padding: 15px;
+    }
+    .pl-mob-0 {
+        padding-left: 0 !important;
+    }
+    .pr-mob-0 {
+        padding-right: 0 !important;
+    }
 }
