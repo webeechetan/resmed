@@ -1,3 +1,12 @@
+    /*----------------------------------------------------------------
+                        Initilize tooltip
+    ------------------------------------------------------------------ */
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
 $(document).ready(function() {
     /*----------------------------------------------------------------
                         Hiding section two on page load
@@ -43,14 +52,13 @@ $(document).ready(function() {
             "ui-droppable-hover": "dragged_item_hover"
           },
         drop: function( event, ui ) {
-            console.log(ui)
-            // ui.draggable.draggable({revert:false});
             ui.draggable.draggable({disabled: true});
             let dropped_item = $(this).find(".dropped_items");
             $(this).find("img").remove();
-            
+            $(this).droppable( 'disable' );
             let value = ui.draggable.html();
-            ui.draggable.attr('data-submit','true');
+            ui.draggable.attr('data-submit',"true");
+
             dropped_item.html(value);
             ui.draggable.removeClass("box_icon required");
             ui.draggable.addClass("dragged_done");
@@ -65,19 +73,29 @@ $(document).ready(function() {
 function validate(){
     let exercises = $(".draggable_icon");
     let can_submit = true;
+    let error_list = "";
     exercises.each(function(i){
-        let submit = $(exercises[i]).data('submit');
-        let task = $(exercises[i]).data('task');
-        if(submit==false && task=='bedtime' || task=='sleep' || task == 'dinner' || task=='walk'){
+        let submit = $(exercises[i]).attr('data-submit');
+        let task = $(exercises[i]).attr('data-task');
+        // console.log(submit);
+        // $(exercises[i]).removeClass('required');
+        if(submit=="false" && (task=='bedtime' || task=='sleep' || task == 'dinner' || task=='walk')){
             can_submit = false;
             $(exercises[i]).addClass('required');
+            if(i==0){
+                error_list += task;
+            }else{
+                error_list += ", "+task;
+            }
         }
+        
     });
+    error_list += " is required";
     if(can_submit){
         return true;
-    }else{
-        return false;
     }
+    toastr.warning(error_list)
+    return false;
 }
 
 
@@ -99,7 +117,7 @@ function submit_shedule(){
         let slot = {time:time.attr('data-time'),task:task.attr('data-task')};
         activities.push(slot)
     })
-    console.log(activities)
+    
     for(x of activities){
 
         // bedtime
@@ -205,7 +223,7 @@ function submit_shedule(){
         $(".three_star").addClass('d-none');
     }
 
-    if(yellow == red){
+    if(yellow == red ){
         $(".two_star").removeClass('d-none');
         $(".one_star").addClass('d-none');
         $(".one_three").addClass('d-none');
