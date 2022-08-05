@@ -122,7 +122,7 @@ function submit_shedule(){
                 green++;
             }else if(x.time == '8pm' || x.time == '10pm'){
                 yellow++;
-            }else{
+            }else if(x.time == "6px" || x.time == "7pm" || x.time == "12pm" || x.time == "2am" || x.time == "4am"){
                 red++;
             }
         }
@@ -131,7 +131,7 @@ function submit_shedule(){
         if(x.task == 'party'){
             if(x.time == '6pm' || x.time == '7pm' || x.time == '8pm'){
                 yellow++;
-            }else{
+            }else if(x.time == "9pm" || x.time == "10pm" || x.time == "12pm" || x.time == "2am" || x.time == "4am"){
                 red++;
             }
         }
@@ -142,7 +142,7 @@ function submit_shedule(){
                 green++;
             }else if(x.time == '8pm'){
                 yellow++;
-            }else{
+            }else if(x.time == "9pm" || x.time == "10pm" || x.time == "12pm" || x.time == "2am" || x.time == "4am"){
                 red++;
             }
         }
@@ -153,7 +153,7 @@ function submit_shedule(){
                 green++;
             }else if(x.time == '8pm'){
                 yellow++;
-            }else{
+            }else if(x.time == "9pm" || x.time == "10pm" || x.time == "12pm" || x.time == "2am" || x.time == "4am"){
                 red++;
             }
         }
@@ -164,7 +164,7 @@ function submit_shedule(){
                 green++;
             }else if(x.time == '8pm'){
                 yellow++;
-            }else{
+            }else if(x.time=="6pm" || x.time == "7pm" || x.time == "12pm" || x.time == "2am" || x.time == "4am"){
                 red++;
             }
         }
@@ -175,7 +175,7 @@ function submit_shedule(){
                 green++;
             }else if(x.time == '8pm'){
                 yellow++;
-            }else{
+            }else if(x.time=="6pm" || x.time == "9pm" || x.time == "10pm" || x.time == "12pm" || x.time == "2am" || x.time == "4am"){
                 red++;
             }
         }
@@ -186,7 +186,7 @@ function submit_shedule(){
                 green++;
             }else if(x.time == '7pm'){
                 yellow++;
-            }else{
+            }else if(x.time =="8pm" || x.time == "9pm" || x.time == "10pm" || x.time == "12pm" || x.time == "2am" || x.time == "4am"){
                 red++;
             }
         }
@@ -197,7 +197,7 @@ function submit_shedule(){
                 green++;
             }else if(x.time == '7pm' || x.time == '9pm'){
                 yellow++;
-            }else{
+            }else if(x.time == "10pm" || x.time == "12pm" || x.time == "2am" || x.time == "4am"){
                 red++;
             }
         }
@@ -207,13 +207,13 @@ function submit_shedule(){
     $(".section_three").show();
     $(".section_two").hide();
 
-    if(green >= 5){
+    if(green >= 4){
         $(".three_star").removeClass('d-none');
         $(".two_star").addClass('d-none');
         $(".one_star").addClass('d-none');
     }
 
-    if(yellow >= 5){
+    if(yellow >= 4){
         $(".two_star").removeClass('d-none');
         $(".one_star").addClass('d-none');
         $(".three_star").addClass('d-none');
