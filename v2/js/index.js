@@ -4,6 +4,7 @@ $(document).ready(function() {
     ------------------------------------------------------------------ */
     $(".section_two").hide();
     $(".section_three").hide();
+    
 
 
     /*----------------------------------------------------------------
@@ -46,6 +47,8 @@ $(document).ready(function() {
             // ui.draggable.draggable({revert:false});
             ui.draggable.draggable({disabled: true});
             let dropped_item = $(this).find(".dropped_items");
+            $(this).find("img").remove();
+            
             let value = ui.draggable.html();
             ui.draggable.attr('data-submit','true');
             dropped_item.html(value);
@@ -64,7 +67,8 @@ function validate(){
     let can_submit = true;
     exercises.each(function(i){
         let submit = $(exercises[i]).data('submit');
-        if(submit==false){
+        let task = $(exercises[i]).data('task');
+        if(submit==false && task=='bedtime' || task=='sleep' || task == 'dinner' || task=='walk'){
             can_submit = false;
             $(exercises[i]).addClass('required');
         }
@@ -81,9 +85,9 @@ function validate(){
                         Submit shedule 
 ------------------------------------------------------------------ */
 function submit_shedule(){
-    // if(!validate()){
-    //      return false;
-    // }
+    if(!validate()){
+         return false;
+    }
     let green = 0;
     let yellow = 0;
     let red = 0;
@@ -185,6 +189,42 @@ function submit_shedule(){
         }
 
     }
+
+    $(".section_three").show();
+    $(".section_two").hide();
+
+    if(green >= 5){
+        $(".three_star").removeClass('d-none');
+        $(".two_star").addClass('d-none');
+        $(".one_star").addClass('d-none');
+    }
+
+    if(yellow >= 5){
+        $(".two_star").removeClass('d-none');
+        $(".one_star").addClass('d-none');
+        $(".three_star").addClass('d-none');
+    }
+
+    if(yellow == red){
+        $(".two_star").removeClass('d-none');
+        $(".one_star").addClass('d-none');
+        $(".one_three").addClass('d-none');
+    }
+
+    if(red > yellow){
+        $(".one_star").removeClass('d-none');
+        $(".two_star").addClass('d-none');
+        $(".three_star").addClass('d-none');
+    }
+
+    if(yellow == 0 && red == 0 && green == 0){
+        $(".one_star").removeClass('d-none');
+        $(".two_star").addClass('d-none');
+        $(".three_star").addClass('d-none');
+    }
+
+
+
     console.log('Red '+red);
     console.log('Yellow '+yellow);
     console.log('Green '+green);
