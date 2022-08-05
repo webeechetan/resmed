@@ -21,6 +21,7 @@ $(document).ready(function() {
     $(".play_game_btn").click(function(e){
         $(".section_one").addClass('d-none');
         $(".section_two").removeClass('d-none');
+        play_drag_sound();
     });
 
 
@@ -32,6 +33,7 @@ $(document).ready(function() {
         start : function(event,ui){
             ui.helper.removeClass('box_icon');
             ui.helper.addClass('drag_start');
+            play_drag_sound();
         },
         stop : function(event,ui){
             ui.helper.removeClass('drag_start');
@@ -51,6 +53,7 @@ $(document).ready(function() {
             "ui-droppable-hover": "dragged_item_hover"
           },
         drop: function( event, ui ) {
+            play_drop_sound();
             ui.draggable.draggable({disabled: true});
             let dropped_item = $(this).find(".dropped_items");
             $(this).find("img").remove();
@@ -67,7 +70,6 @@ $(document).ready(function() {
 /*----------------------------------------------------------------
                         Validation  
 ------------------------------------------------------------------ */
-
 function validate(){
     let exercises = $(".draggable_icon");
     let can_submit = true;
@@ -96,6 +98,33 @@ function validate(){
 
 
 /*----------------------------------------------------------------
+                        Sounds Functions 
+------------------------------------------------------------------ */
+
+
+
+function play_drag_sound(){
+    var audio = new Audio('audio/drag.wav');
+    audio.play();
+}
+
+function play_drop_sound(){
+    var audio = new Audio('audio/drop.wav');
+    audio.play();
+}
+
+function play_winning_sound(){
+    var audio = new Audio('audio/winner.wav');
+    audio.play();
+}
+
+function play_thankyou_sound(){
+    var audio = new Audio('audio/thank-you.wav');
+    audio.play();   
+}
+
+
+/*----------------------------------------------------------------
                         Submit shedule 
 ------------------------------------------------------------------ */
 function submit_shedule(){
@@ -106,6 +135,7 @@ function submit_shedule(){
     let yellow = 0;
     let red = 0;
     let activities = [];
+    let total_fill_ups = 0;
     let dropped_items = $(".dropped_items");
     dropped_items.each(function(i){
         let task = $(dropped_items[i]).find('img');
@@ -113,7 +143,11 @@ function submit_shedule(){
         let slot = {time:time.attr('data-time'),task:task.attr('data-task')};
         activities.push(slot)
     })
-    
+    for(x of activities){
+        if(x.task != undefined){
+            total_fill_ups++;
+        }
+    }
     for(x of activities){
 
         // bedtime
@@ -203,42 +237,24 @@ function submit_shedule(){
         }
 
     }
-
+    console.log(total_fill_ups)
     $(".section_three").removeClass('d-none');
     $(".section_two").addClass('d-none');
 
-    if(green >= 4){
+    if(green==total_fill_ups){
         $(".three_star").removeClass('d-none');
         $(".two_star").addClass('d-none');
         $(".one_star").addClass('d-none');
-    }
-
-    if(yellow >= 4){
-        $(".two_star").removeClass('d-none');
-        $(".one_star").addClass('d-none');
-        $(".three_star").addClass('d-none');
-    }
-
-    if(yellow == red ){
+    }else if(green > 0){
         $(".two_star").removeClass('d-none');
         $(".one_star").addClass('d-none');
         $(".one_three").addClass('d-none');
-    }
-
-    if(red > yellow){
+    }else{
         $(".one_star").removeClass('d-none');
         $(".two_star").addClass('d-none');
         $(".three_star").addClass('d-none');
     }
-
-    if(yellow == 0 && red == 0 && green == 0){
-        $(".one_star").removeClass('d-none');
-        $(".two_star").addClass('d-none');
-        $(".three_star").addClass('d-none');
-    }
-
-
-
+    play_winning_sound();
     console.log('Red '+red);
     console.log('Yellow '+yellow);
     console.log('Green '+green);
@@ -246,6 +262,10 @@ function submit_shedule(){
 }
 
 
+$("#subscribe_us_form").submit(function(event){
+    event.preventDefault();
+    $('#disc-pop').modal('hide');
+    play_thankyou_sound();
+})
 
 
-// submit_shedule()

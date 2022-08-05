@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Google Fonts -->
@@ -122,16 +121,6 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <input type="text" class="form-control" placeholder="Phone Number" id="" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <select class="custom-select form-control" id="" required>
-                                            <option selected disabled value="">Gender</option>
-                                            <option>Male</option>
-                                            <option>Female</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <input type="input" class="form-control" placeholder="Date of Birth" id="dob" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <input type="email" class="form-control" placeholder="Email Address" id="" required>
@@ -247,42 +236,42 @@
                                 </li>
                                 <li class="box_icon droppable_icon">
                                     <img src="images/Asset-16.png" class="img-fluid">
-                                    <span class="timings" data-time="6pm"></span>
+                                    <span class="timings" data-time="7pm"></span>
                                     <div class="dropped_items"></div>
                                 </li>
                                 <li class="box_icon droppable_icon">
                                     <img src="images/Asset-15.png" class="img-fluid">
-                                    <span class="timings" data-time="6pm"></span>
+                                    <span class="timings" data-time="8pm"></span>
                                     <div class="dropped_items">
                                     </div>
                                 </li>
                                 <li class="box_icon droppable_icon">
                                     <img src="images/Asset-14.png" class="img-fluid">
-                                    <span class="timings" data-time="6pm"></span>
+                                    <span class="timings" data-time="9pm"></span>
                                     <div class="dropped_items">
                                     </div>
                                 </li>
                                 <li class="box_icon droppable_icon">
                                     <img src="images/Asset-13.png" class="img-fluid">
-                                    <span class="timings" data-time="6pm"></span>
+                                    <span class="timings" data-time="10pm"></span>
                                     <div class="dropped_items">
                                     </div>
                                 </li>
                                 <li class="box_icon droppable_icon">
                                     <img src="images/Asset-12.png" class="img-fluid">
-                                    <span class="timings" data-time="6pm"></span>
+                                    <span class="timings" data-time="12pm"></span>
                                     <div class="dropped_items">
                                     </div>
                                 </li>
                                 <li class="box_icon droppable_icon">
                                     <img src="images/Asset-11.png" class="img-fluid">
-                                    <span class="timings" data-time="6pm"></span>
+                                    <span class="timings" data-time="2am"></span>
                                     <div class="dropped_items">
                                     </div>
                                 </li>
                                 <li class="box_icon droppable_icon">
                                     <img src="images/Asset-10.png" class="img-fluid">
-                                    <span class="timings" data-time="6pm"></span>
+                                    <span class="timings" data-time="4am"></span>
                                     <div class="dropped_items">
                                     </div>
                                 </li>
@@ -327,7 +316,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="">
+                                        <form action="" id="subscribe_us_form">
                                             <div class="newsletter-item">
                                                 <input type="email" class="form-control" placeholder="Email Address" id="" required="">
                                                 <button class="btn btn-primary" type="submit">Send</button>
@@ -459,7 +448,6 @@
     <!-- JS FILES --> 
     <script src="js/jquery.min.js"></script> 
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
     <script src='js/wow.min.js'></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
@@ -468,7 +456,6 @@
     <script src='js/index.js'></script>
 
     <script>
-        $('#dob').datepicker({});
         $('.single-slider').slick({
             dots: true,
             arrows: false
