@@ -10,8 +10,8 @@ $(document).ready(function() {
     /*----------------------------------------------------------------
                         Hiding section two on page load
     ------------------------------------------------------------------ */
-    // $(".section_two").hide();
-    // $(".section_three").hide();
+    $(".section_two").addClass('d-none');
+    $(".section_three").addClass('d-none');
     
 
 
@@ -19,8 +19,8 @@ $(document).ready(function() {
         Hiding section one and showing section two on play btn click
     ------------------------------------------------------------------ */
     $(".play_game_btn").click(function(e){
-        $(".section_one").hide();
-        $(".section_two").show();
+        $(".section_one").addClass('d-none');
+        $(".section_two").removeClass('d-none');
     });
 
 
@@ -204,8 +204,8 @@ function submit_shedule(){
 
     }
 
-    $(".section_three").show();
-    $(".section_two").hide();
+    $(".section_three").removeClass('d-none');
+    $(".section_two").addClass('d-none');
 
     if(green >= 5){
         $(".three_star").removeClass('d-none');
