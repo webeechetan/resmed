@@ -3,14 +3,16 @@ $(document).ready(function() {
                         Hiding section two on page load
     ------------------------------------------------------------------ */
     $(".section_two").hide();
+    $(".section_three").hide();
+    
 
 
     /*----------------------------------------------------------------
         Hiding section one and showing section two on play btn click
     ------------------------------------------------------------------ */
     $(".play_game_btn").click(function(e){
-        $(".section_one").hide('slow');
-        $(".section_two").show('fold',2000);
+        $(".section_one").hide();
+        $(".section_two").show();
     });
 
 
@@ -41,9 +43,12 @@ $(document).ready(function() {
             "ui-droppable-hover": "dragged_item_hover"
           },
         drop: function( event, ui ) {
+            console.log(ui)
             // ui.draggable.draggable({revert:false});
             ui.draggable.draggable({disabled: true});
             let dropped_item = $(this).find(".dropped_items");
+            $(this).find("img").remove();
+            
             let value = ui.draggable.html();
             ui.draggable.attr('data-submit','true');
             dropped_item.html(value);
@@ -62,7 +67,8 @@ function validate(){
     let can_submit = true;
     exercises.each(function(i){
         let submit = $(exercises[i]).data('submit');
-        if(submit==false){
+        let task = $(exercises[i]).data('task');
+        if(submit==false && task=='bedtime' || task=='sleep' || task == 'dinner' || task=='walk'){
             can_submit = false;
             $(exercises[i]).addClass('required');
         }
@@ -93,7 +99,7 @@ function submit_shedule(){
         let slot = {time:time.attr('data-time'),task:task.attr('data-task')};
         activities.push(slot)
     })
-
+    console.log(activities)
     for(x of activities){
 
         // bedtime
@@ -183,8 +189,44 @@ function submit_shedule(){
         }
 
     }
+
+    $(".section_three").show();
+    $(".section_two").hide();
+
+    if(green >= 5){
+        $(".three_star").removeClass('d-none');
+        $(".two_star").addClass('d-none');
+        $(".one_star").addClass('d-none');
+    }
+
+    if(yellow >= 5){
+        $(".two_star").removeClass('d-none');
+        $(".one_star").addClass('d-none');
+        $(".three_star").addClass('d-none');
+    }
+
+    if(yellow == red){
+        $(".two_star").removeClass('d-none');
+        $(".one_star").addClass('d-none');
+        $(".one_three").addClass('d-none');
+    }
+
+    if(red > yellow){
+        $(".one_star").removeClass('d-none');
+        $(".two_star").addClass('d-none');
+        $(".three_star").addClass('d-none');
+    }
+
+    if(yellow == 0 && red == 0 && green == 0){
+        $(".one_star").removeClass('d-none');
+        $(".two_star").addClass('d-none');
+        $(".three_star").addClass('d-none');
+    }
+
+
+
     console.log('Red '+red);
-    console.log('Yello '+yellow);
+    console.log('Yellow '+yellow);
     console.log('Green '+green);
     
 }

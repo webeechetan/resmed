@@ -13,12 +13,16 @@
     margin-top: 5px;    
 }
 
-.dropped_items{
+/* .dropped_items{
     border-radius: 20px;
     background-color:  rgb(61 65 51);
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 5px;
+} */
+
+.dropped_items img{
+    height: 40px;
 }
 
 .dragged_done{
@@ -30,5 +34,42 @@
     text-align: center;
 }
 
+.drag_start{
+    border-radius: 10px;
+    background-color: rgb(218, 67, 47);
+    margin-left: auto;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+
+.dragged_item_hover{
+    background-color: rgb(16, 254, 8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.highlight_droppable{
+    border: dotted;
+    border-color: black;
+}
+
+.test{
+    background-color: rgb(16, 254, 8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: dotted;
+    border-color: darkorange;
+}
+
+.draggable_icon img{
+    height: 55px;
+}
+
+.required{
+    border: 4px solid red;
+}
 
 
