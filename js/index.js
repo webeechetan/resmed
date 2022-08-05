@@ -6,7 +6,6 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 
-
 $(document).ready(function() {
     /*----------------------------------------------------------------
                         Hiding section two on page load
@@ -58,7 +57,6 @@ $(document).ready(function() {
             $(this).droppable( 'disable' );
             let value = ui.draggable.html();
             ui.draggable.attr('data-submit',"true");
-
             dropped_item.html(value);
             ui.draggable.removeClass("box_icon required");
             ui.draggable.addClass("dragged_done");
@@ -77,8 +75,6 @@ function validate(){
     exercises.each(function(i){
         let submit = $(exercises[i]).attr('data-submit');
         let task = $(exercises[i]).attr('data-task');
-        // console.log(submit);
-        // $(exercises[i]).removeClass('required');
         if(submit=="false" && (task=='bedtime' || task=='sleep' || task == 'dinner' || task=='walk')){
             can_submit = false;
             $(exercises[i]).addClass('required');

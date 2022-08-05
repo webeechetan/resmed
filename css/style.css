@@ -80,12 +80,7 @@ body{
 
 
 .dragged_done{
-    /* border-radius: 10px;
-    background-color: rgb(148, 175, 224);
-    margin-left: auto;
-    margin-top: 5px;
-    color: white;
-    text-align: center; */
+    opacity: 0.2;
 }
 
 .drag_start{
