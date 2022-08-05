@@ -10,8 +10,8 @@ $(document).ready(function() {
     /*----------------------------------------------------------------
                         Hiding section two on page load
     ------------------------------------------------------------------ */
-    $(".section_two").hide();
-    $(".section_three").hide();
+    // $(".section_two").hide();
+    // $(".section_three").hide();
     
 
 

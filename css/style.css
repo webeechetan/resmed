@@ -1,120 +1,348 @@
-/******** start img css*********************/
-.sec-space{
- margin-top: 60px;
- margin-bottom: 60px;
+:root {
+    --primary: #9d2872;
+    --secondary: #e577bd;
+    --text-color: #212529;
+    --radius-shape: 130px 35px 100px 35px/15px 225px 15px 255px;
 }
-body{
-    overflow-x: hidden;
+.text-primary {
+    color: var(--primary) !important;
 }
-.schedule-creation{
-    background-image: url(../Assets/Asset/BG_2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
+.bg-primary {
+    background-color: var(--primary) !important;
 }
-.start-button{  
+body {
+    font-family: 'Barlow', sans-serif;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+iframe {
+    max-width: 100%;
+}
+img {
+    max-width: 100%;
+}
+.sec-space {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+@media (max-width: 767px) {
+    .sec-space {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }  
+    .small, small {
+        font-size: 65%;
+        font-weight: 500;
+    } 
+}
+.font-weight-400 {
+    font-weight: 400;
+}
+.btn-primary {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 12px 30px;
+    border-radius: 130px 35px 100px 35px/15px 225px 15px 255px;
+    box-shadow: 7px 7px 0 rgb(0 0 0 / 20%);
+}
+.btn-primary.btn-big {
+    font-size: 20px;
+}
+.btn-primary:hover, .btn-primary:focus {
+    outline: none;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    box-shadow: 0 0 0 rgb(0 0 0 / 20%);
+}
+.btn-white {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 30px;
+    border-radius: 130px 35px 100px 35px/15px 225px 15px 255px;
+    box-shadow: 7px 7px 0 rgb(0 0 0 / 20%);
+}
+.btn-white:hover, .btn-white:focus {
+    outline: none;
+    color: #fff;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    box-shadow: 0 0 0 rgb(0 0 0 / 20%);
+}
+.line-height-small {
+    line-height: 16px;
+}
+.bg-overlay {
+    position: relative;
+}
+.bg-overlay:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--primary) , var(--secondary));
     position: absolute;
-    bottom: 50%;
-    right: 0%;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
 }
-.start-button img{
-    width: 16%;
+/* ===== Social Icons ===== */
+ul.social-icons li:not(:last-child) {
+    margin-right: 7px;
 }
-.schedule-perfect{
-    background-image: url(..//Assets/Asset/start-game-bg.jpg);
+ul.social-icons li a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ===== Slick Slider ===== */
+.slick-dots li button:before {
+    font-size: 46px;
+}
+.slick-dots li.slick-active button:before {
+    color: var(--secondary);
+}
+.single-slider .slick-track {
+    display: flex;
+    align-items: center;
+}
+.sleep-slider-sec .slick-dots li.slick-active button:before {
+    color: #fff;
+}
+/* ===== Fonts ===== */
+h2 {
+    font-size: 2.8em;
+    font-weight: bold;
+}
+h3 {
+    font-weight: bold;
+}
+@media (max-width: 767px) {
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 575px) {
+    h2 {
+        font-size: 1.6em;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+/* ===== Heading ===== */
+.heading-line {
+    position: relative;
+}
+.heading-line:before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    background: var(--primary);
+}
+.heading-line h2 {
+    background-color: #fff;
+    padding: 0 30px;
+}
+/* ===== Header ===== */
+header {
+    padding: 10px 0;
+}
+.head-btm {
+    background: url(../images/patter-bg1.jpg) no-repeat left top / cover;
+}
+@media (max-width: 575px) {
+    .resmed_logo {
+        max-width: 50px;
+    }
+}
+/* ===== Video Section ===== */
+.video-sec {
+    background: url(../images/patter-bg2.jpg) no-repeat center bottom / cover;
+    border-top: 5px solid var(--primary);
+}
+@media (max-width: 767px) {
+    .video1 {
+        max-height: 330px;
+    }
+}
+/* ===== Form Section ===== */
+.form-box {
+    background: var(--primary);
+    border: 7px solid var(--secondary);
+    border-radius: 20px;
+    padding: 30px;
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+}
+.form-box p, .form-box h4 {
+    color: #fff;
+}
+.form-inner {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .form-inner {
+        display: block;
+    }
+}
+@media (max-width: 575px) {
+    .form-box {
+        padding: 55px 35px 30px;
+    }
+}
+.main-form {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 10px solid var(--secondary);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.main-form p {
+    color: var(--text-color);
+}
+.form-control {
+    border: 1px solid #9d9d9d;
+    padding: 0 10px;
+    min-height: inherit;
+    border-radius: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    border-radius: var(--radius-shape);
+}
+.form-control:focus {
+    border: 1px solid var(--primary);
+    outline: none;
+    box-shadow: none;
+}
+@media (max-width: 575px) {
+    .main-form {
+        padding: 20px 20px 25px;
+    }
+}
+/* ===== Sleep Section ===== */
+.sleep-slider-sec {
+    background: url(../images/slider_img.jpg) no-repeat center / cover;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.sleep-slider-sec:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--primary) , var(--secondary));
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+}
+/* ===== Game ===== */
+.game-wrap {
+    width: 991px;
+    margin: auto;
+}
+.schedule-creation {
+    background-image: url(../images/start-game-bg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-position: center center;
+    position: relative;
+}
+.start-button img {
+    width: 200px;
+    max-width: 100%;
+}
+.start-text1 {
+    width: 500px;
+    margin: auto;
+}
+.schedule-perfect {
+    background-image: url(../images/start-game-bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-position: center center;
     height: 100%; 
 }
-
 .perfect img {
     width: 30%;
 }
-.drag-btn li{
+.drag-btn li {
     width: 50%;
     margin-top: 15px;
 }
-.drag-btn li img{
-    width: 100px;
-    
+.drag-btn li img {
+    width: 70px; 
 }
-.drag-btn{
+.drag-btn {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-   
+    max-width: 190px;
+    flex: 1 1 190px;
+    margin: auto; 
 }
-.final-result{
+.final-result {
     background-color: #821C70;
-    height: 100vh;
     width: 100%;
 }
-.mr-top{
-    margin-top: -10rem;
-}
-.mr-top img{
-    width: 70%;
-}
-
-/* V1 */
-
-.box_icon{
-    
-}
-
-.timing_box{
+.timing_box {
     background-color: aquamarine;
     height: 40px;
     margin-top: 5px;    
 }
-
-/* .dropped_items{
-    border-radius: 20px;
-    background-color:  rgb(61 65 51);
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 5px;
-} */
-
-
-.dragged_done{
+.dragged_done {
     opacity: 0.2;
 }
-
-.drag_start{
+.drag_start {
     border-radius: 10px;
-    /* background-color: rgb(218, 67, 47); */
     margin-top: 5px;
 }
-
-.dragged_item_hover{
-    background-color: rgb(16, 254, 8);
-    padding-top: 10px;
-    padding-bottom: 10px;
+.drag-btn li.required img {
+    filter: drop-shadow(4px 4px 0 red);
 }
-
-
-.highlight_droppable{
-    border: dotted;
-    border-color: black;
+.newsletter-item {
+    display: flex;
+    width: 350px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 130px 35px 100px 35px/15px 225px 15px 255px;
+    position: relative;
 }
-
-.test{
-    background-color: rgb(16, 254, 8);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
-    border: dotted;
-    border-color: darkorange;
+.newsletter-item .form-control {
+    min-height: 50px;
+    margin-right: 5px;
 }
-
-.required{
-    border: 4px solid red;
+.newsletter-item .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 14px;
+    cursor: pointer;
 }
-
-
-
-
-    

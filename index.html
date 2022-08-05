@@ -1,155 +1,464 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body>
-    <section class="schedule-creation section_one">
-      <div class="container">
-          <div class="row text-center">
-              <div class="start-button play_game_btn">
-                <a href="javascript:void(0)"><img src="./Assets/Asset/Assets/Asset 39.png" class="img-fluid"></a>
-              </div> 
-          </div>
-      </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#282828"/>
+    <title>ResMed</title>
+    <meta name="author" content="Themezinho">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300,400,500,600,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <h2 class="text-primary">Awaken</h2>
+                </div>
+                <div class="col-6 text-right">
+                    <img src="images/logo.jpg" class="resmed_logo" width="100" alt="RedMed Logo">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Bottom -->
+    <section class="head-btm py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-white">your best</h2>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="schedule-perfect sec-space section_two">
-      <div class="container">
-        <div class="row pt-5 text-center">
-          <div class="perfect">
-            <img src="./Assets/Asset/Asset 42.png" class="img-fluid">
-          </div> 
+    <!-- Banner Section -->
+    <section class="banner-sec sec-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="images/banner_img.jpg" width="100%" alt="Awaken your best">
+                    <p><b>Disclaimer:</b> A home sleep test is not suitable for everyone. Speak to your physician to discuss sleep test options and whether a home sleep test is suitable for you.</p>
+                </div>
+            </div>
         </div>
-        <div class="row"> 
-          <div class="col-md-4 text-center">
-            <img src="./Assets/Asset/Assets/Asset 19.png" class="img-fluid ms-3">
-            <ul class="list-unstyled drag-btn mt-3">
-              <li class="box_icon draggable_icon" data-task='bedtime' data-submit="false" data-toggle="tooltip" data-placement="top" title="Bed Time">
-                <img src="./Assets/Asset/Assets/Asset 36.png" class="img-fluid" data-task ='bedtime' data-submit="false">
-              </li>
-              <li class="box_icon draggable_icon" data-task='party' data-submit="false" data-toggle="tooltip" data-placement="top" title="Party">
-                <img src="./Assets/Asset/Assets/Asset 38.png" class="img-fluid" data-task='party' data-submit="false">
-              </li>
-              <li class="box_icon draggable_icon" data-task='exercise' data-submit="false" data-toggle="tooltip" data-placement="top" title="Exercise">
-                <img src="./Assets/Asset/Assets/Asset 35.png" class="img-fluid" data-task='exercise' data-submit="false">
-              </li>
-              <li class="box_icon draggable_icon" data-task='tv-ott' data-submit="false" data-toggle="tooltip" data-placement="top" title="TV/OTT">
-                <img src="./Assets/Asset/Assets/Asset 31.png" class="img-fluid" data-task='tv-ott' data-submit="false">
-              </li>
-              <li class="box_icon draggable_icon" data-task='sleep' data-submit="false" data-toggle="tooltip" data-placement="top" title="Sleep">
-                <img src="./Assets/Asset/Assets/Asset 34.png" class="img-fluid" data-task='sleep' data-submit="false">
-              </li>
-              <li class="box_icon draggable_icon" data-task='dinner' data-submit="false" data-toggle="tooltip" data-placement="top" title="Dinner">
-                <img src="./Assets/Asset/Assets/Asset 37.png" class="img-fluid" data-task='dinner' data-submit="false">
-              </li>
-              <li class="box_icon draggable_icon" data-task='tea' data-submit="false" data-toggle="tooltip" data-placement="top" title="Tea">
-                <img src="./Assets/Asset/Assets/Asset 33.png" class="img-fluid" data-task='tea' data-submit="false">
-              </li>
-              <li class="box_icon draggable_icon" data-task='walk' data-submit="false" data-toggle="tooltip" data-placement="top" title="Walk">
-                <img src="./Assets/Asset/Assets/Asset 32.png" class="img-fluid" data-task='walk' data-submit="false">
-              </li>
-              
-            </ul>
-          </div>
-          <div class="col-md-4 m-auto">
-            <img src="./Assets/Asset/Asset 43.png" class="img-fluid">
-          </div>
-          <div class="col-md-4 text-center">
-            <img src="./Assets/Asset/Assets/Asset 18.png" class="img-fluid ms-3">
-            <ul class="list-unstyled drag-btn mt-3">
-              <li class="box_icon droppable_icon">
-                <img src="./Assets/Asset/Assets/Asset 17.png" class="img-fluid">
-                <span class="timings" data-time="6pm"></span>
-                <div class="dropped_items"></div>
-              </li>
-              <li class="box_icon droppable_icon">
-                <img src="./Assets/Asset/Assets/Asset 16.png" class="img-fluid">
-                <span class="timings" data-time="6pm"></span>
-                <div class="dropped_items"></div>
-              </li>
-              <li  class="box_icon droppable_icon">
-                <img src="./Assets/Asset/Assets/Asset 15.png" class="img-fluid">
-                <span class="timings" data-time="6pm"></span>
-                <div class="dropped_items">
-                </div>
-              </li>
-              <li class="box_icon droppable_icon">
-                <img src="./Assets/Asset/Assets/Asset 14.png" class="img-fluid">
-                <span class="timings" data-time="6pm"></span>
-                <div class="dropped_items">
-                </div>
-              </li>
-              <li class="box_icon droppable_icon">
-                <img src="./Assets/Asset/Assets/Asset 13.png" class="img-fluid">
-                <span class="timings" data-time="6pm"></span>
-                <div class="dropped_items">
-                </div>
-              </li>
-              <li class="box_icon droppable_icon">
-                <img src="./Assets/Asset/Assets/Asset 12.png" class="img-fluid">
-                <span class="timings" data-time="6pm"></span>
-                <div class="dropped_items">
-                </div>
-              </li>
-              <li class="box_icon droppable_icon">
-                <img src="./Assets/Asset/Assets/Asset 11.png" class="img-fluid">
-                <span class="timings" data-time="6pm"></span>
-                <div class="dropped_items">
-                </div>
-              </li>
-              <li class="box_icon droppable_icon">
-                <img src="./Assets/Asset/Assets/Asset 10.png" class="img-fluid">
-                <span class="timings" data-time="6pm"></span>
-                <div class="dropped_items">
-                </div>
-              </li>
-              
-            </ul>
-            <button class="btn btn-primary" onclick="submit_shedule()">Submit</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="final-result section_three">
-      <div class="container">
-        <div class="row py-5">
-         <div class="col-md-4 col-12 mb-5  mb-lg-0 three_star d-none">
-          <img src="./Assets/Asset/Assets/Asset 45.png" class="img-fluid">
-          <div class="text-center mr-top">
-            <img src="./Assets/Asset/Assets/Asset 44.png" class="img-fluid">
-          </div>
-         </div>
-         <div class="col-md-4 col-12 mb-5 mt-5 mt-lg-0 mb-lg-0 two_star d-none">
-          <img src="./Assets/Asset/Assets/Asset 46.png" class="img-fluid">
-          <div class="text-center mr-top">
-            <img src="./Assets/Asset/Assets/Asset 44.png" class="img-fluid">
-          </div>
-         </div>
-         <div class="col-md-4 col-12 mb-5 mt-5 mt-lg-0 mb-lg-0 one_star d-none">
-          <img src="./Assets/Asset/Assets/Asset 47.png" class="img-fluid">
-          <div class="text-center mr-top">
-            <img src="./Assets/Asset/Assets/Asset 44.png" class="img-fluid">
-          </div>
-         </div>
-        </div>
-      </div>
-      
     </section>
 
+    <!-- Video Section -->
+    <section class="video-sec sec-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="text-primary mb-4 mb-md-5">Wanna know how and why?<br/> Watch the video below!</h2>
+                    <iframe width="900" height="500" class="video1" src="https://www.youtube.com/embed/CeWb2ANW7cA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- feeling Section -->
+    <section class="sec-space">
+        <div class="heading-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="text-primary">Feeling convinced? Meet Sleep Baba and get some amazing sleep tips!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-4 mt-md-5">
+                    <img src="images/img1.jpg" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!--Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <!-- Form Section -->
+    <section class="sec-space overflow-hidden">
+        <div class="heading-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="text-primary"><span class="font-weight-400 d-xl-flex justify-content-center">Start including these tips in your daily routine</span> And consult a sleep coach* and sleep like a teen.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-lg-0 mt-4 pt-md-5">
+            <div class="form-inner">
+                <img src="images/sleep-man-left.jpg" class="d-none d-lg-flex" width="100%" alt="">
+                <div>
+                    <div class="form-box text-center">
+                        <div class="form-box-inner">
+                            <h4><b>BOOK A FREE SESSION WITH A SLEEP COACH*</b></h4>
+                            <p>Fill the form below and a <b>ResMed Sleep Coach*</b> will contact you.</p>
+                            <form class="main-form" action="">
+                                <h4 class="text-primary"><b>Enter Details</b></h4>
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <input type="text" class="form-control" placeholder="Full Name" id="" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" placeholder="Phone Number" id="" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <select class="custom-select form-control" id="" required>
+                                            <option selected disabled value="">Gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="input" class="form-control" placeholder="Date of Birth" id="dob" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="email" class="form-control" placeholder="Email Address" id="" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <select class="custom-select form-control" id="" required>
+                                            <option selected disabled value="">I want to know about:</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="text-left line-height-small"><small>I am over 18 years of age, have read and accepted ResMed’s Privacy Notice and Terms of Use, am aware that my personal data will be processed for the purposes outlined in these documents, and agree to ResMed sending me communications, from which I can unsubscribe at any time.</small></p>
+                                <button class="btn btn-primary btn-big" type="submit">Submit</button>
+                            </form>
+                            <p class="line-height-small d-none d-md-block"><small>Disclaimer: ResMed Sleep Coaches are sales and customer service representatives who have received training in sleep health. Although  they can give general information about sleep health, sleep disorders and products that may help improve your sleep, they are not qualified healthcare professionals and cannot provide medical advice. We recommend that you consult with your doctor for a broad assessment of your health.  This service is not a substitute for consulting with your doctor.</small></p>
+                        </div>
+                    </div>
+                    <p class="line-height-small d-md-none mt-4"><small>Disclaimer: ResMed Sleep Coaches are sales and customer service representatives who have received training in sleep health. Although  they can give general information about sleep health, sleep disorders and products that may help improve your sleep, they are not qualified healthcare professionals and cannot provide medical advice. We recommend that you consult with your doctor for a broad assessment of your health.  This service is not a substitute for consulting with your doctor.</small></p>
+                </div>
+                <img src="images/sleep-man-right.jpg" class="d-none d-lg-flex" width="100%" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Game -->
+    <section class="game-sec">
+        <div class="heading-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="text-primary"><span class="font-weight-400 d-xl-flex justify-content-center">A sleep coach* will get back to you soon </span> Until then show them your ideal sleep schedule</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="game-wrap">
+                <div class="schedule-creation section_one">
+                    <img src="images/Text_01.png" class="start-text1" alt="">
+                    <div class="start-button play_game_btn">
+                        <a href="javascript:void(0)"><img src="images/Asset-39.png" class="img-fluid"></a>
+                    </div>
+                    <img src="images/Text_02.png" class="start-text2" alt="">
+                </div>
+                <div class="schedule-perfect sec-space section_two">
+                    <div class="row text-center">
+                        <div class="col-12 perfect">
+                            <img src="images/Asset-42.png" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 text-center">
+                            <img src="images/Asset-19.png" class="img-fluid ms-3">
+                            <ul class="list-unstyled drag-btn mt-3">
+                                <li class="box_icon draggable_icon" data-task='bedtime' data-submit="false" data-toggle="tooltip"
+                                    data-placement="top" title="Bed Time">
+                                    <img src="images/Asset-36.png" class="img-fluid" data-task='bedtime'
+                                        data-submit="false">
+                                </li>
+                                <li class="box_icon draggable_icon" data-task='party' data-submit="false" data-toggle="tooltip"
+                                    data-placement="top" title="Party">
+                                    <img src="images/Asset-38.png" class="img-fluid" data-task='party'
+                                        data-submit="false">
+                                </li>
+                                <li class="box_icon draggable_icon" data-task='exercise' data-submit="false" data-toggle="tooltip"
+                                    data-placement="top" title="Exercise">
+                                    <img src="images/Asset-35.png" class="img-fluid" data-task='exercise'
+                                        data-submit="false">
+                                </li>
+                                <li class="box_icon draggable_icon" data-task='tv-ott' data-submit="false" data-toggle="tooltip"
+                                    data-placement="top" title="TV/OTT">
+                                    <img src="images/Asset-31.png" class="img-fluid" data-task='tv-ott'
+                                        data-submit="false">
+                                </li>
+                                <li class="box_icon draggable_icon" data-task='sleep' data-submit="false" data-toggle="tooltip"
+                                    data-placement="top" title="Sleep">
+                                    <img src="images/Asset-34.png" class="img-fluid" data-task='sleep'
+                                        data-submit="false">
+                                </li>
+                                <li class="box_icon draggable_icon" data-task='dinner' data-submit="false" data-toggle="tooltip"
+                                    data-placement="top" title="Dinner">
+                                    <img src="images/Asset-37.png" class="img-fluid" data-task='dinner'
+                                        data-submit="false">
+                                </li>
+                                <li class="box_icon draggable_icon" data-task='tea' data-submit="false" data-toggle="tooltip"
+                                    data-placement="top" title="Tea">
+                                    <img src="images/Asset-33.png" class="img-fluid" data-task='tea'
+                                        data-submit="false">
+                                </li>
+                                <li class="box_icon draggable_icon" data-task='walk' data-submit="false" data-toggle="tooltip"
+                                    data-placement="top" title="Walk">
+                                    <img src="images/Asset-32.png" class="img-fluid" data-task='walk'
+                                        data-submit="false">
+                                </li>
+            
+                            </ul>
+                        </div>
+                        <div class="col-4 mx-auto text-center">
+                            <img src="images/Asset-43.png" class="img-fluid">
+                            <button class="btn btn-primary mt-4" onclick="submit_shedule()">Submit</button>
+                        </div>
+                        <div class="col-4 text-center">
+                            <img src="images/Asset-18.png" class="img-fluid ms-3">
+                            <ul class="list-unstyled drag-btn mt-3">
+                                <li class="box_icon droppable_icon">
+                                    <img src="images/Asset-17.png" class="img-fluid">
+                                    <span class="timings" data-time="6pm"></span>
+                                    <div class="dropped_items"></div>
+                                </li>
+                                <li class="box_icon droppable_icon">
+                                    <img src="images/Asset-16.png" class="img-fluid">
+                                    <span class="timings" data-time="6pm"></span>
+                                    <div class="dropped_items"></div>
+                                </li>
+                                <li class="box_icon droppable_icon">
+                                    <img src="images/Asset-15.png" class="img-fluid">
+                                    <span class="timings" data-time="6pm"></span>
+                                    <div class="dropped_items">
+                                    </div>
+                                </li>
+                                <li class="box_icon droppable_icon">
+                                    <img src="images/Asset-14.png" class="img-fluid">
+                                    <span class="timings" data-time="6pm"></span>
+                                    <div class="dropped_items">
+                                    </div>
+                                </li>
+                                <li class="box_icon droppable_icon">
+                                    <img src="images/Asset-13.png" class="img-fluid">
+                                    <span class="timings" data-time="6pm"></span>
+                                    <div class="dropped_items">
+                                    </div>
+                                </li>
+                                <li class="box_icon droppable_icon">
+                                    <img src="images/Asset-12.png" class="img-fluid">
+                                    <span class="timings" data-time="6pm"></span>
+                                    <div class="dropped_items">
+                                    </div>
+                                </li>
+                                <li class="box_icon droppable_icon">
+                                    <img src="images/Asset-11.png" class="img-fluid">
+                                    <span class="timings" data-time="6pm"></span>
+                                    <div class="dropped_items">
+                                    </div>
+                                </li>
+                                <li class="box_icon droppable_icon">
+                                    <img src="images/Asset-10.png" class="img-fluid">
+                                    <span class="timings" data-time="6pm"></span>
+                                    <div class="dropped_items">
+                                    </div>
+                                </li>
+            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="final-result sec-space section_three">
+                    <div class="three_star d-none">
+                        <div class="result-card">
+                            <img src="images/Asset-45.png" class="img-fluid">
+                            <div class="text-center mr-top">
+                                <img src="images/Asset-44.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two_star d-none">
+                        <div class="result-card">
+                            <img src="images/Asset-46.png" class="img-fluid">
+                            <div class="text-center mr-top">
+                                <img src="images/Asset-44.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one_star d-none">
+                        <div class="result-card">
+                            <img src="images/Asset-47.png" class="img-fluid">
+                            <div class="text-center mr-top">
+                                <img src="images/Asset-44.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newsletter-pop">
+                        <form action="">
+                            <div class="newsletter-item">
+                                <div class="close"><i class="fas fa-times"></i></div>
+                                <input type="email" class="form-control" placeholder="Email Address" id="" required="">
+                                <button class="btn btn-primary" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <p><small><b>Disclaminer:</b> ResMed Sleep Coaches are sales and customer service representatives who have received training in sleep health. Although  they can give general information about sleep health, sleep disorders and products that may help improve your sleep, they are not qualified healthcare professionals and cannot provide medical advice. We recommend that you consult with your doctor for a broad assessment of your health.  This service is not a substitute for consulting with your doctor.</small></p>
+        </div>
+    </section>
+
+    <!-- Sleeping Slider Section -->
+    <section class="sleep-slider-sec sec-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="single-slider">
+                        <div class="slider-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2 class="text-white mb-3">Why is sleep important for your health?</h3>
+                                    <p class="text-white">For some odd reason, whenever the topic of health comes up, sleep tends to be left out of the conversation… We find this a little odd as sleep is what helps recharge our body, repair damaged cells, strengthen our immune system and recharge our cardiovascular system.</p>
+                                    <p class="text-white mb-4"><b>Want to know more about the importance of healthy sleep?</b></p>
+                                    <a href="#" class="btn btn-white">Enquire now</a>
+                                    <p class="line-height-small text-white mt-4"><small>Disclaimer: ResMed Sleep Coaches are sales and customer service representatives who have received training in sleep health. Although  they can give general information about sleep health, sleep disorders and products that may help improve your sleep, they are not qualified healthcare professionals and cannot provide medical advice. We recommend that you consult with your doctor for a broad assessment of your health.  This service is not a substitute for consulting with your doctor.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2 class="text-white mb-3">What exactly are sleeping disorders?</h3>
+                                    <p class="text-white">To put it simply, a sleeping disorder is a medical condition that affects an individuals health, safety and quality of life. These conditions are very real medical problems that affect millions worldwide and can in some cases have dire consequences.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2 class="text-white mb-3">Why do you need a sleep diagnosis?</h3>
+                                    <p class="text-white">The benefits of good sleep are simpler to understand, compared to the actual concept of sleep. A good night's sleep is essential to feel fresh and active in the morning and during the entire day. It is no surprise that sleeping has always constituted a significant part of our lifestyle, since time immemorial. Since sleep plays one of the most important roles in our lives, anything that disrupts a peaceful sleep is considered a problem. Snoring is one factor that is as a hindrance to a good night's sleep, and therefore, has been widely studied and understood.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2 class="text-white mb-3">Have you ever diagnosed your sleep?</h3>
+                                    <a href="#" class="btn btn-white">Try it now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="sec-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="text-primary mb-4 mb-md-5">Why ResMed?</h2>
+                    <img src="images/img2.jpg" alt="Why ResMed?">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="bg-primary" style="border-width: 7px;">
+
+    <!-- Get to know section -->
+    <section class="sec-space">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-md-6">
+                    <h2 class="text-primary mb-3 mb-md-4">Get to know our Home Sleep Test</h2>
+                    <p>The ResMed Home Sleep Test has been engineered to help people understand their sleeping patterns and diagnose any underlying medical condition that may be causing trouble in the present or could cause trouble in the future.</p>
+                    <p>It’s a simple test that can be taken at home but the results can be life changing.</p>
+                    <a href="#" class="btn btn-primary mt-3 mt-md-4">Book Now</a>
+                </div>
+                <div class="col-md-6 mt-5 mt-md-0">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/UEdGJp5fL40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row pt-4 pt-md-5">
+                <div class="col-12 text-center">
+                    <p><b>Disclaimer:</b> A home sleep test is not suitable for everyone. Speak to your physician to discuss sleep test options and whether a home sleep test is suitable for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <section class="bg-primary py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white">Copyright © 2022 ResMed. All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="social-icons d-flex flex-wrap justify-content-center justify-content-sm-end align-items-center">
+                        <li>
+                            <a href="#" target="_black" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_black" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_black" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_black" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS FILES --> 
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
+    <script src='js/wow.min.js'></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+    integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="./js/index.js"></script>
-  </body>
+    <script src='js/index.js'></script>
+
+    <script>
+        $('#dob').datepicker({});
+        $('.single-slider').slick({
+            dots: true,
+            arrows: false
+        });
+    </script>
+    
+</body>
+
 </html>
