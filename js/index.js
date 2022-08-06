@@ -21,8 +21,10 @@ $(document).ready(function() {
     $(".play_game_btn").click(function(e){
         $(".section_one").addClass('d-none');
         $(".section_two").removeClass('d-none');
-        // play_game_start_sound();
-        play_background_sound();
+        play_game_start_sound();
+        setTimeout(() => {
+            play_background_sound();
+        }, 1500);
     });
 
 
@@ -299,6 +301,4 @@ $("#subscribe_us_form").submit(function(event){
     event.preventDefault();
     $('#disc-pop').modal('hide');
     play_thankyou_sound();
-})
-
-
+});
