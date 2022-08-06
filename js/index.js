@@ -128,6 +128,7 @@ function play_thankyou_sound(){
                         Submit shedule 
 ------------------------------------------------------------------ */
 function submit_shedule(){
+    /// return if validation fails
     if(!validate()){
          return false;
     }
@@ -193,7 +194,7 @@ function submit_shedule(){
         }
 
         // sleep
-        if(x.task == 'tv-ott'){
+        if(x.task == 'sleep'){
             if(x.time == '9pm' || x.time == '10pm'){
                 green++;
             }else if(x.time == '8pm'){
@@ -205,7 +206,7 @@ function submit_shedule(){
 
         // dinner
         if(x.task == 'dinner'){
-            if(x.time == '7pm'){
+            if(x.time == '7pm' || x.time == '8pm'){
                 green++;
             }else if(x.time == '8pm'){
                 yellow++;
@@ -237,7 +238,9 @@ function submit_shedule(){
         }
 
     }
-    console.log(total_fill_ups)
+
+    ///Logic Part
+
     $(".section_three").removeClass('d-none');
     $(".section_two").addClass('d-none');
 
@@ -245,7 +248,7 @@ function submit_shedule(){
         $(".three_star").removeClass('d-none');
         $(".two_star").addClass('d-none');
         $(".one_star").addClass('d-none');
-    }else if(green > 0){
+    }else if(yellow > red || green > red){
         $(".two_star").removeClass('d-none');
         $(".one_star").addClass('d-none');
         $(".one_three").addClass('d-none');
@@ -255,12 +258,17 @@ function submit_shedule(){
         $(".three_star").addClass('d-none');
     }
     play_winning_sound();
-    console.log('Red '+red);
-    console.log('Yellow '+yellow);
-    console.log('Green '+green);
-    
+
+    console.log(yellow)
+    console.log(red)
+    console.log(green)
+
 }
 
+
+/*----------------------------------------------------------------
+                Handling Subscribe Us Form Submit
+------------------------------------------------------------------ */
 
 $("#subscribe_us_form").submit(function(event){
     event.preventDefault();
