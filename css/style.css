@@ -28,7 +28,50 @@ img {
     padding-top: 70px;
     padding-bottom: 70px;
 }
+.tooltip-ui {
+    position: relative;
+}
+.tooltip-ui:after {
+    content: attr(tooltip-title);
+    background-color: var(--secondary);
+    position: absolute;
+    bottom: 100%;;
+    left: 15px;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 3px 15px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+.tooltip-ui:before {
+    content: '';
+    border: 10px solid transparent;
+    border-top: 10px solid var(--secondary);
+    position: absolute;
+    top: -2px;
+    left: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    
+}
+.tooltip-ui:hover:after, .tooltip-ui:hover:before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 @media (max-width: 767px) {
+    .tooltip-ui:after {
+        left: 5px;
+    }
+    .tooltip-ui:before {
+        left: 10px;
+    }
     .sec-space {
         padding-top: 30px;
         padding-bottom: 30px;
