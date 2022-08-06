@@ -21,7 +21,8 @@ $(document).ready(function() {
     $(".play_game_btn").click(function(e){
         $(".section_one").addClass('d-none');
         $(".section_two").removeClass('d-none');
-        play_drag_sound();
+        // play_game_start_sound();
+        play_background_sound();
     });
 
 
@@ -93,6 +94,7 @@ function validate(){
         return true;
     }
     toastr.warning(error_list)
+    play_error_sound();
     return false;
 }
 
@@ -122,6 +124,29 @@ function play_thankyou_sound(){
     var audio = new Audio('audio/thank-you.wav');
     audio.play();   
 }
+
+function play_background_sound(){
+    var audio = new Audio('audio/background.mp3');
+    audio.play();
+    audio.volume = 0.4;
+}
+
+function play_error_sound(){
+    var audio = new Audio('audio/error.wav');
+    audio.play();
+}
+
+function play_game_start_sound(){
+    var audio = new Audio('audio/game-start.wav');
+    audio.play();
+}
+
+function play_clapping_sound(){
+    var audio = new Audio('audio/clapping.wav');
+    audio.play();
+}
+
+
 
 
 /*----------------------------------------------------------------
@@ -257,7 +282,7 @@ function submit_shedule(){
         $(".two_star").addClass('d-none');
         $(".three_star").addClass('d-none');
     }
-    play_winning_sound();
+    play_clapping_sound();
 
     console.log(yellow)
     console.log(red)
