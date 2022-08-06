@@ -253,15 +253,17 @@ header {
     align-items: center;
     position: relative;
 }
-.sleep-slider-sec:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, var(--primary) , var(--secondary));
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0.5;
+@media (max-width: 767px) {
+    .sleep-slider-sec:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, var(--primary) , var(--secondary));
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0.5;
+    }
 }
 /* ===== Game ===== */
 .game-wrap {
@@ -427,4 +429,12 @@ header {
     .pr-mob-0 {
         padding-right: 0 !important;
     }
+}
+/* ===== Toster ===== */
+#toast-container>div, #toast-container>div:hover {
+    box-shadow: 0 3px 25px rgb(0 0 0 / 20%);
+    border: none;
+    padding: 20px;
+    background-image: none !important;
+    background: var(--secondary);
 }
