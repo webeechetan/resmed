@@ -107,7 +107,7 @@ function validate(){
     if(can_submit){
         return true;
     }
-    toastr.warning("Fill atleast 4 time slots with activities");
+    toastr.warning("<span class='rem-text'>Remember!</span> <br/> 4 mandatory activities denoted with a red highlight must be filled in order to submit.");
     play_error_sound();
     return false;
 }

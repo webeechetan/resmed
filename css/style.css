@@ -3,9 +3,16 @@
     --secondary: #e577bd;
     --text-color: #212529;
     --radius-shape: 130px 35px 100px 35px/15px 225px 15px 255px;
+    --grey: #EFEFEF;
+}
+.bg-grey {
+    background-color: var(--grey);
 }
 .text-primary {
     color: var(--primary) !important;
+}
+.text-secondary {
+    color: var(--secondary) !important;
 }
 .bg-primary {
     background-color: var(--primary) !important;
@@ -25,8 +32,8 @@ img {
     max-width: 100%;
 }
 .sec-space {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .tooltip-ui {
     position: relative;
@@ -98,7 +105,8 @@ img {
 .btn-primary.btn-big {
     font-size: 20px;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
     outline: none;
     background-color: var(--secondary);
     border: 1px solid var(--secondary);
@@ -122,6 +130,7 @@ img {
     border: 1px solid var(--secondary);
     box-shadow: 0 0 0 rgb(0 0 0 / 20%);
 }
+
 .line-height-small {
     line-height: 16px;
 }
@@ -211,15 +220,22 @@ h3 {
 }
 /* ===== Header ===== */
 header {
-    padding: 10px 0;
+    padding: 5px 0;
 }
 .head-btm {
     background: url(../images/patter-bg1.jpg) no-repeat left top / cover;
+}
+.header-title-top {
+    line-height: 32px;
 }
 @media (max-width: 575px) {
     .resmed_logo {
         max-width: 50px;
     }
+}
+/*  ===== Banner Section ===== */
+.banner-sec {
+    background-color: #EFEFEF;
 }
 /* ===== Video Section ===== */
 .video-sec {
@@ -315,7 +331,7 @@ header {
     margin: auto;
 }
 .schedule-creation {
-    background-image: url(../images/start-game-bg.jpg);
+    background-image: url(../images/gif/game_bg_1.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -334,8 +350,12 @@ header {
     width: 500px;
     margin: 0 auto;
 }
+.start-text2 {
+    width: 600px;
+    max-width: 100%;
+}
 .schedule-perfect {
-    background-image: url(../images/start-game-bg2.jpg);
+    background-image: url(../images/gif/game_bg_2.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -361,7 +381,7 @@ header {
     margin: auto; 
 }
 .final-result {
-    background: #821C70 url(../images/start-game-bg.jpg) no-repeat center / cover;
+    background: #821C70 url(../images/gif/game_bg_2.gif) no-repeat center / cover;
     width: 100%;
     min-height: 625px;
     display: flex;
@@ -421,6 +441,14 @@ header {
 .modal-header, .modal-body {
     padding: 0;
     border: none;
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        margin: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
 }
 .game-disc {
     width: 991px;
@@ -489,12 +517,29 @@ header {
     box-shadow: 0 3px 25px rgb(0 0 0 / 20%);
     border: none;
     padding: 20px;
-    color: #fff;
-    background: red;
+    color: var(--primary);
+    background: #fff;
     font-weight: bold;
+    opacity: 1;
+    text-align: center;
+    border-radius: var(--radius-shape);
+    border: 5px solid var(--secondary);
+}
+.toast-top-right {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #toast-container>.toast-warning {
     background-image: none !important;
+}
+.rem-text {
+    font-size: 18px;
 }
 .confetti {
     display: flex;
@@ -668,20 +713,19 @@ header {
     }
 } 
 @keyframes button_shadow {
-    10%, 90% {
-        filter: drop-shadow(0,0,0,0.9);
+    from, to {
+        filter: drop-shadow(0 0 30px #fff);
     }
-    20%, 80% {
-      -webkit-transform: translate3d(2px, 0, 0);
-              transform: translate3d(2px, 0, 0);
+    50% {
+        filter: drop-shadow(0 0 10px #fff);
     }
-    30%, 50%, 70% {
-      -webkit-transform: translate3d(-3px, 0, 0);
-              transform: translate3d(-3px, 0, 0);
+} 
+@keyframes float {
+    from, to {
+        transform: translateY(15px);
     }
-    40%, 60% {
-      -webkit-transform: translate3d(3px, 0, 0);
-              transform: translate3d(3px, 0, 0);
+    50% {
+        transform: translateY(0);
     }
 } 
 /* Apply our pulse animation */
@@ -693,7 +737,11 @@ header {
     animation: shake 1.5s ease-in-out infinite;
     animation-direction: alternate;
 }
-.start-button .shake {
+.start-button .filter_shadow {
     animation: button_shadow 1.5s ease-in-out infinite;
+    animation-direction: alternate;
+}
+.float_ani {
+    animation: float 1.5s ease-in-out infinite;
     animation-direction: alternate;
 }
