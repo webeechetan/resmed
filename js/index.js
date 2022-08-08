@@ -1,3 +1,27 @@
+function touchHandler(event) {
+    var touch = event.changedTouches[0];
+
+    var simulatedEvent = document.createEvent("MouseEvent");
+        simulatedEvent.initMouseEvent({
+        touchstart: "mousedown",
+        touchmove: "mousemove",
+        touchend: "mouseup"
+    }[event.type], true, true, window, 1,
+        touch.screenX, touch.screenY,
+        touch.clientX, touch.clientY, false,
+        false, false, false, 0, null);
+
+    touch.target.dispatchEvent(simulatedEvent);
+    event.preventDefault();
+}
+
+function init() {
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+}    
+    
     /*----------------------------------------------------------------
                         Initilize tooltip
     ------------------------------------------------------------------ */
@@ -291,8 +315,44 @@ function submit_shedule(){
 
 $("#subscribe_us_form").submit(function(event){
     event.preventDefault();
-    $('#disc-pop').modal('hide');
+    $(".subscribe_msg").removeClass('d-none');
+    let email = $("#subscribe_email").val();
+
+    //check here if email is exist in your databse or not
+
+    let email_already_exist = true;
+
+    if(email_already_exist){
+        $(".subscribe_msg").html('Coupon code already has sended to your email');
+    }else{
+        $(".subscribe_msg").html('Your 40% coupon has been sended to your email.');
+    }
+
+    setTimeout(function(){
+        $(".subscribe_msg").hide('slow');
+    },3000);
+    setTimeout(function(){
+        $('#disc-pop').modal('hide');
+    },4000);
+
     play_thankyou_sound();
+})
+
+
+/*----------------------------------------------------------------
+                Handling booking  Form Submit
+------------------------------------------------------------------ */
+
+$(".main-form").submit(function(event){
+    event.preventDefault();
+    $("#full_name").val('');
+    $("#email").val('');
+    $("#contact").val('');
+    $(".book_msg").removeClass('d-none')
+    $(".book_msg").html('Your 40% coupon has been sended to your email.');
+    setTimeout(function(){
+        $(".book_msg").hide('slow');   
+    },3000)
 })
 
 
