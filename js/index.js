@@ -23,6 +23,9 @@ function init() {
 }    
     
     /*----------------------------------------------------------------
+=======
+/*----------------------------------------------------------------
+>>>>>>> 05690c9f58f91c38b47316b2864443fbc0ead1a5
                         Initilize tooltip
     ------------------------------------------------------------------ */
 
@@ -48,7 +51,9 @@ $(document).ready(function() {
         $(".section_one").addClass('d-none');
         $(".section_two").removeClass('d-none');
         play_game_start_sound();
-        background_music = play_background_sound();
+        setTimeout(() => {
+            background_music = play_background_sound();
+        }, 1500);
     });
 
 
@@ -113,7 +118,7 @@ function validate(){
     if(can_submit){
         return true;
     }
-    toastr.warning("Your Error Goes Here");
+    toastr.warning("Fill atleast 4 time slots with activities");
     play_error_sound();
     return false;
 }

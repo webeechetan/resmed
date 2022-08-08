@@ -28,7 +28,50 @@ img {
     padding-top: 70px;
     padding-bottom: 70px;
 }
+.tooltip-ui {
+    position: relative;
+}
+.tooltip-ui:after {
+    content: attr(tooltip-title);
+    background-color: var(--secondary);
+    position: absolute;
+    bottom: 100%;;
+    left: 15px;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 3px 15px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+.tooltip-ui:before {
+    content: '';
+    border: 10px solid transparent;
+    border-top: 10px solid var(--secondary);
+    position: absolute;
+    top: -2px;
+    left: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    
+}
+.tooltip-ui:hover:after, .tooltip-ui:hover:before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 @media (max-width: 767px) {
+    .tooltip-ui:after {
+        left: 5px;
+    }
+    .tooltip-ui:before {
+        left: 10px;
+    }
     .sec-space {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -307,6 +350,7 @@ header {
 }
 .drag-btn li img {
     width: 70px; 
+    cursor: pointer;
 }
 .drag-btn {
     display: flex;
@@ -317,12 +361,13 @@ header {
     margin: auto; 
 }
 .final-result {
-    background-color: #821C70;
+    background: #821C70 url(../images/start-game-bg.jpg) no-repeat center / cover;
     width: 100%;
     min-height: 625px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .timing_box {
     background-color: aquamarine;
@@ -348,7 +393,7 @@ header {
     min-height: 50px;
     margin-right: 5px;
 }
-.newsletter-item .close {
+.newsletter-item button.close, .newsletter-item button.close:focus, .newsletter-item button.close:active {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -381,6 +426,15 @@ header {
     width: 991px;
     max-width: 100%;
     margin: 30px auto 0;
+}
+.one_star, .two_star, .three_star {
+    z-index: 9999;
+}
+.modal-backdrop {
+    z-index: 9999;
+}
+.modal {
+    z-index: 99999;
 }
 @media (max-width: 991px) {
     .game-wrap {
@@ -435,6 +489,211 @@ header {
     box-shadow: 0 3px 25px rgb(0 0 0 / 20%);
     border: none;
     padding: 20px;
+    color: #fff;
+    background: red;
+    font-weight: bold;
+}
+#toast-container>.toast-warning {
     background-image: none !important;
-    background: var(--secondary);
+}
+.confetti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1000;
+}
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: #ffd300;
+    top: 0;
+    opacity: 0;
+}
+.confetti-piece:nth-child(1) {
+    left: 7%;
+    transform: rotate(-40deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 182ms;
+    animation-duration: 1116ms;
+}
+.confetti-piece:nth-child(2) {
+    left: 14%;
+    transform: rotate(4deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 161ms;
+    animation-duration: 1076ms;
+}
+.confetti-piece:nth-child(3) {
+    left: 21%;
+    transform: rotate(-51deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 481ms;
+    animation-duration: 1103ms;
+}
+.confetti-piece:nth-child(4) {
+    left: 28%;
+    transform: rotate(61deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 334ms;
+    animation-duration: 708ms;
+}
+.confetti-piece:nth-child(5) {
+    left: 35%;
+    transform: rotate(-52deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 302ms;
+    animation-duration: 776ms;
+}
+.confetti-piece:nth-child(6) {
+    left: 42%;
+    transform: rotate(38deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 180ms;
+    animation-duration: 1168ms;
+}
+.confetti-piece:nth-child(7) {
+    left: 49%;
+    transform: rotate(11deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 395ms;
+    animation-duration: 1200ms;
+}
+.confetti-piece:nth-child(8) {
+    left: 56%;
+    transform: rotate(49deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 14ms;
+    animation-duration: 887ms;
+}
+.confetti-piece:nth-child(9) {
+    left: 63%;
+    transform: rotate(-72deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 149ms;
+    animation-duration: 805ms;
+}
+.confetti-piece:nth-child(10) {
+    left: 70%;
+    transform: rotate(10deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 351ms;
+    animation-duration: 1059ms;
+}
+.confetti-piece:nth-child(11) {
+    left: 77%;
+    transform: rotate(4deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 307ms;
+    animation-duration: 1132ms;
+}
+.confetti-piece:nth-child(12) {
+    left: 84%;
+    transform: rotate(42deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 464ms;
+    animation-duration: 776ms;
+}
+.confetti-piece:nth-child(13) {
+    left: 91%;
+    transform: rotate(-72deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 429ms;
+    animation-duration: 818ms;
+}
+.confetti-piece:nth-child(odd) {
+    background: #7431e8;
+}
+.confetti-piece:nth-child(even) {
+    z-index: 1;
+}
+.confetti-piece:nth-child(4n) {
+    width: 5px;
+    height: 12px;
+    animation-duration: 2000ms;
+}
+.confetti-piece:nth-child(3n) {
+    width: 3px;
+    height: 10px;
+    animation-duration: 2500ms;
+    animation-delay: 1000ms;
+}
+.confetti-piece:nth-child(4n-7) {
+  background: red;
+}
+@keyframes makeItRain {
+    from {opacity: 0;}
+    50% {opacity: 1;}
+    to {transform: translateY(350px);}
+}
+
+/* Define our pulse animation */
+@keyframes pulse {
+    0% {
+        font-size: 100px;
+    }
+    25% {
+        font-size: 200px;
+    }
+    50% {
+        font-size: 100px
+    }
+    75% {
+        font-size: 150px;
+    }
+    100% {
+        font-size: 100px;
+    }
+}
+@keyframes shake {
+    10%, 90% {
+      -webkit-transform: translate3d(-1px, 0, 0);
+              transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      -webkit-transform: translate3d(2px, 0, 0);
+              transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      -webkit-transform: translate3d(-3px, 0, 0);
+              transform: translate3d(-3px, 0, 0);
+    }
+    40%, 60% {
+      -webkit-transform: translate3d(3px, 0, 0);
+              transform: translate3d(3px, 0, 0);
+    }
+} 
+@keyframes button_shadow {
+    10%, 90% {
+        filter: drop-shadow(0,0,0,0.9);
+    }
+    20%, 80% {
+      -webkit-transform: translate3d(2px, 0, 0);
+              transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      -webkit-transform: translate3d(-3px, 0, 0);
+              transform: translate3d(-3px, 0, 0);
+    }
+    40%, 60% {
+      -webkit-transform: translate3d(3px, 0, 0);
+              transform: translate3d(3px, 0, 0);
+    }
+} 
+/* Apply our pulse animation */
+.heart {
+    animation: pulse 1.5s ease-in-out infinite;
+    animation-direction: alternate;
+}
+.shake {
+    animation: shake 1.5s ease-in-out infinite;
+    animation-direction: alternate;
+}
+.start-button .shake {
+    animation: button_shadow 1.5s ease-in-out infinite;
+    animation-direction: alternate;
 }

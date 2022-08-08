@@ -28,12 +28,12 @@
 <body>
     <header>
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-end">
                 <div class="col-6">
-                    <h2 class="text-primary">Awaken</h2>
+                    <h2 class="text-primary mb-0">Awaken</h2>
                 </div>
                 <div class="col-6 text-right">
-                    <img src="images/logo.jpg" class="resmed_logo" width="100" alt="RedMed Logo">
+                    <img src="images/logo.jpg" class="resmed_logo" width="80" alt="RedMed Logo">
                 </div>
             </div>
         </div>
@@ -54,14 +54,18 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <img src="images/banner_img.jpg" width="100%" alt="Awaken your best">
-                    <p><b>Disclaimer:</b> A home sleep test is not suitable for everyone. Speak to your physician to discuss sleep test options and whether a home sleep test is suitable for you.</p>
+                    <div class="row">
+                        <div class="col-md-10 col-lg-9 mx-auto">
+                            <p><b>Disclaimer:</b> A home sleep test is not suitable for everyone. Speak to your physician to discuss sleep test options and whether a home sleep test is suitable for you.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Video Section -->
-    <section class="video-sec sec-space">
+    <section class="video-sec sec-space pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -73,7 +77,7 @@
     </section>
 
     <!-- feeling Section -->
-    <section class="sec-space">
+    <section class="sec-space pb-0">
         <div class="heading-line">
             <div class="container">
                 <div class="row">
@@ -168,7 +172,7 @@
                 <div class="schedule-creation section_one">
                     <img src="images/Text_01.png" class="start-text1" alt="">
                     <div class="start-button play_game_btn text-center">
-                        <a href="javascript:void(0)"><img src="images/Asset-39.png" class="img-fluid"></a>
+                        <a href="javascript:void(0)"><img src="images/Asset-39.png" class="img-fluid shake"></a>
                     </div>
                     <img src="images/Text_02.png" class="start-text2" alt="">
                 </div>
@@ -182,41 +186,35 @@
                         <div class="col-4 pr-mob-0 text-center">
                             <img src="images/Asset-19.png" class="img-fluid drag-img ms-3">
                             <ul class="list-unstyled drag-btn mt-3">
-                                <li class="box_icon draggable_icon required" data-task='bedtime' data-submit="false" data-toggle="tooltip"  title="Tooltip on top">
+                                
+                                <li class="box_icon draggable_icon tooltip-ui required" data-task='bedtime' data-submit="false" tooltip-title="Bedtime">
                                     <img src="images/Asset-36.png" class="img-fluid" data-task='bedtime' data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon" data-task='party' data-submit="false" data-toggle="tooltip"
-                                    data-placement="top" title="Party">
-                                    <img src="images/Asset-38.png" class="img-fluid" data-task='party'
-                                        data-submit="false">
+                                <li class="box_icon draggable_icon tooltip-ui" data-task='party' data-submit="false" tooltip-title="Party">
+                                    <img src="images/Asset-38.png" class="img-fluid" data-task='party' data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon" data-task='exercise' data-submit="false" data-toggle="tooltip"
-                                    data-placement="top" title="Exercise">
+                                <li class="box_icon draggable_icon tooltip-ui" data-task='exercise' data-submit="false" tooltip-title="Exercise">
                                     <img src="images/Asset-35.png" class="img-fluid" data-task='exercise'
                                         data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon" data-task='tv-ott' data-submit="false" data-toggle="tooltip"
-                                    data-placement="top" title="TV/OTT">
+                                <li class="box_icon draggable_icon tooltip-ui" data-task='tv-ott' data-submit="false" tooltip-title="TV/OTT">
                                     <img src="images/Asset-31.png" class="img-fluid" data-task='tv-ott'
                                         data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon required" data-task='sleep' data-submit="false" data-toggle="tooltip"
+                                <li class="box_icon draggable_icon tooltip-ui required" data-task='sleep' data-submit="false" data-toggle="tooltip"
                                     data-placement="top" title="Sleep">
                                     <img src="images/Asset-34.png" class="img-fluid" data-task='sleep'
                                         data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon required" data-task='dinner' data-submit="false" data-toggle="tooltip"
-                                    data-placement="top" title="Dinner">
+                                <li class="box_icon draggable_icon required tooltip-ui" data-task='dinner' data-submit="false" tooltip-title="Dinner">
                                     <img src="images/Asset-37.png" class="img-fluid" data-task='dinner'
                                         data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon" data-task='tea' data-submit="false" data-toggle="tooltip"
-                                    data-placement="top" title="Tea">
+                                <li class="box_icon draggable_icon tooltip-ui" data-task='tea' data-submit="false" tooltip-title="Tea">
                                     <img src="images/Asset-33.png" class="img-fluid" data-task='tea'
                                         data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon required" data-task='walk' data-submit="false" data-toggle="tooltip"
-                                    data-placement="top" title="Walk">
+                                <li class="box_icon draggable_icon tooltip-ui required" data-task='walk' data-submit="false" tooltip-title="Walk">
                                     <img src="images/Asset-32.png" class="img-fluid" data-task='walk'
                                         data-submit="false">
                                 </li>
@@ -282,6 +280,21 @@
                     </div>
                 </div>
                 <div class="final-result sec-space section_three">
+                    <div class="confetti">
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                    </div>
                     <div class="three_star d-none">
                         <div class="result-card">
                             <img src="images/Asset-45.png" class="img-fluid">
@@ -311,7 +324,7 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header mb-3">
-                                        <h5 class="modal-title" id="exampleModalLabel">Subscribe Us</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Please enter your email ID to receive the discount code</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -332,7 +345,7 @@
                 </div>
             </div>
             <div class="game-disc">
-                <p><small><b>Disclaminer:</b> ResMed Sleep Coaches are sales and customer service representatives who have received training in sleep health. Although  they can give general information about sleep health, sleep disorders and products that may help improve your sleep, they are not qualified healthcare professionals and cannot provide medical advice. We recommend that you consult with your doctor for a broad assessment of your health.  This service is not a substitute for consulting with your doctor.</small></p>
+                <p><small><b>Disclaimer:</b> ResMed Sleep Coaches are sales and customer service representatives who have received training in sleep health. Although  they can give general information about sleep health, sleep disorders and products that may help improve your sleep, they are not qualified healthcare professionals and cannot provide medical advice. We recommend that you consult with your doctor for a broad assessment of your health.  This service is not a substitute for consulting with your doctor.</small></p>
             </div>
         </div>
     </section>
@@ -349,7 +362,7 @@
                                     <h2 class="text-white mb-3">Why is sleep important for your health?</h3>
                                     <p class="text-white">For some odd reason, whenever the topic of health comes up, sleep tends to be left out of the conversation… We find this a little odd as sleep is what helps recharge our body, repair damaged cells, strengthen our immune system and recharge our cardiovascular system.</p>
                                     <p class="text-white mb-4"><b>Want to know more about the importance of healthy sleep?</b></p>
-                                    <a href="#" class="btn btn-white">Enquire now</a>
+                                    <a href="#" class="btn btn-white"><b>Enquire now</b></a>
                                     <p class="line-height-small text-white mt-4"><small>Disclaimer: ResMed Sleep Coaches are sales and customer service representatives who have received training in sleep health. Although  they can give general information about sleep health, sleep disorders and products that may help improve your sleep, they are not qualified healthcare professionals and cannot provide medical advice. We recommend that you consult with your doctor for a broad assessment of your health.  This service is not a substitute for consulting with your doctor.</small></p>
                                 </div>
                             </div>
@@ -423,9 +436,9 @@
     <!-- Copyright -->
     <section class="bg-primary py-2">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center text-center text-md-left">
                 <div class="col-md-6">
-                    <p class="mb-0 text-white">Copyright © 2022 ResMed. All rights reserved.</p>
+                    <p class="mb-2 mb-md-0 text-white">Copyright © 2022 ResMed. All rights reserved.</p>
                 </div>
                 <div class="col-md-6">
                     <ul class="social-icons d-flex flex-wrap justify-content-center justify-content-sm-end align-items-center">
@@ -450,13 +463,12 @@
     <!-- JS FILES --> 
     <script src="js/jquery.min.js"></script> 
     <script src="js/bootstrap.min.js"></script>
-    <script src='js/wow.min.js'></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
     integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src='js/index.js'></script>
+    <script src="js/index.js"></script>
 
     <script>
         $('.single-slider').slick({
