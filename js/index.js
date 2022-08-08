@@ -91,7 +91,7 @@ function validate(){
     if(can_submit){
         return true;
     }
-    toastr.warning("Your Error Goes Here");
+    toastr.warning("Fill atleast 4 time slots with activities");
     play_error_sound();
     return false;
 }

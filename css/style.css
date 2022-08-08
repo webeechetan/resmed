@@ -393,7 +393,7 @@ header {
     min-height: 50px;
     margin-right: 5px;
 }
-.newsletter-item .close {
+.newsletter-item button.close, .newsletter-item button.close:focus, .newsletter-item button.close:active {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -426,6 +426,12 @@ header {
     width: 991px;
     max-width: 100%;
     margin: 30px auto 0;
+}
+.one_star, .two_star, .three_star {
+    z-index: 9999;
+}
+.modal {
+    z-index: 99999;
 }
 @media (max-width: 991px) {
     .game-wrap {
@@ -480,9 +486,13 @@ header {
     box-shadow: 0 3px 25px rgb(0 0 0 / 20%);
     border: none;
     padding: 20px;
-    color: red;
+    color: #fff;
+    background: red;
+    font-weight: bold;
 }
-
+#toast-container>.toast-warning {
+    background-image: none !important;
+}
 .confetti {
     display: flex;
     justify-content: center;
