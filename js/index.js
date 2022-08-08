@@ -6,6 +6,8 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 
+    let background_music;
+
 $(document).ready(function() {
     /*----------------------------------------------------------------
                         Hiding section two on page load
@@ -23,7 +25,7 @@ $(document).ready(function() {
         $(".section_two").removeClass('d-none');
         play_game_start_sound();
         setTimeout(() => {
-            play_background_sound();
+            background_music = play_background_sound();
         }, 1500);
     });
 
@@ -83,19 +85,13 @@ function validate(){
         if(submit=="false" && (task=='bedtime' || task=='sleep' || task == 'dinner' || task=='walk')){
             can_submit = false;
             $(exercises[i]).addClass('required');
-            if(i==0){
-                error_list += task;
-            }else{
-                error_list += ", "+task;
-            }
         }
         
     });
-    error_list += " is required";
     if(can_submit){
         return true;
     }
-    toastr.warning(error_list)
+    toastr.warning("Your Error Goes Here");
     play_error_sound();
     return false;
 }
@@ -127,10 +123,11 @@ function play_thankyou_sound(){
     audio.play();   
 }
 
-function play_background_sound(){
+function play_background_sound(option){
     var audio = new Audio('audio/background.mp3');
     audio.play();
     audio.volume = 0.4;
+    return audio;
 }
 
 function play_error_sound(){
@@ -284,12 +281,9 @@ function submit_shedule(){
         $(".two_star").addClass('d-none');
         $(".three_star").addClass('d-none');
     }
+
+    background_music.pause();
     play_clapping_sound();
-
-    console.log(yellow)
-    console.log(red)
-    console.log(green)
-
 }
 
 
