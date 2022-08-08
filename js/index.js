@@ -328,9 +328,9 @@ $("#subscribe_us_form").submit(function(event){
     let email_already_exist = true;
 
     if(email_already_exist){
-        $(".subscribe_msg").html('Coupon code already has sended to your email');
+        $(".subscribe_msg").html('Your 40% OFF coupon has been mailed to you');
     }else{
-        $(".subscribe_msg").html('Your 40% coupon has been sended to your email.');
+        $(".subscribe_msg").html('Your 40% OFF coupon has been mailed to you');
     }
 
     setTimeout(function(){
@@ -339,8 +339,6 @@ $("#subscribe_us_form").submit(function(event){
     setTimeout(function(){
         $('#disc-pop').modal('hide');
     },4000);
-
-    play_thankyou_sound();
 })
 
 
@@ -353,11 +351,8 @@ $(".main-form").submit(function(event){
     $("#full_name").val('');
     $("#email").val('');
     $("#contact").val('');
-    $(".book_msg").removeClass('d-none')
-    $(".book_msg").html('Your 40% coupon has been sended to your email.');
-    setTimeout(function(){
-        $(".book_msg").hide('slow');   
-    },3000)
+    $('#thankyou-pop').modal('show');
+    // $(".trigger_popup").click();
 })
 
 

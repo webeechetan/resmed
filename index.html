@@ -148,7 +148,6 @@
                                 </div>
                                 <p class="text-left line-height-small"><small>I am over 18 years of age, have read and accepted ResMed’s Privacy Notice and Terms of Use, am aware that my personal data will be processed for the purposes outlined in these documents, and agree to ResMed sending me communications, from which I can unsubscribe at any time.</small></p>
                                 <button class="btn btn-primary btn-big" type="submit">Submit</button>
-                                <div class="mt-3 text-primary book_msg d-none"></div>
                             </form>
                             <p class="line-height-small d-none d-md-block"><small>Disclaimer: ResMed Sleep Coaches are sales and customer service representatives who have received training in sleep health. Although  they can give general information about sleep health, sleep disorders and products that may help improve your sleep, they are not qualified healthcare professionals and cannot provide medical advice. We recommend that you consult with your doctor for a broad assessment of your health.  This service is not a substitute for consulting with your doctor.</small></p>
                         </div>
@@ -205,8 +204,7 @@
                                     <img src="images/Asset-31.png" class="img-fluid" data-task='tv-ott'
                                         data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon tooltip-ui required" data-task='sleep' data-submit="false" data-toggle="tooltip"
-                                    data-placement="top" title="Sleep">
+                                <li class="box_icon draggable_icon tooltip-ui required" data-task='sleep' data-submit="false"  tooltip-title="Sleep">
                                     <img src="images/Asset-34.png" class="img-fluid" data-task='sleep'
                                         data-submit="false">
                                 </li>
@@ -303,7 +301,7 @@
                         <div class="result-card">
                             <img src="images/Asset-45.png" class="img-fluid">
                             <div class="disc-btn">
-                                <a href="javascript:;" data-toggle="modal" data-target="#disc-pop"><img src="images/Asset-44.png" class="img-fluid"></a>
+                                <a href="javascript:;" class="trigger_popup" data-toggle="modal" data-target="#disc-pop"><img src="images/Asset-44.png" class="img-fluid"></a>
                             </div>
                         </div>
                     </div>
@@ -463,8 +461,8 @@
     </section>
 
     <!-- Thankyou Popup -->
-    <div class="game-thankyou-pop">
-        <div class="modal fade" id="disc-pop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="thankyou-pop">
+        <div class="modal fade" id="thankyou-pop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header mb-3">
