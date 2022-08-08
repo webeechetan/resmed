@@ -445,10 +445,14 @@ header {
 .modal-content {
     border-radius: var(--radius-shape);
     padding: 30px;
+    border: 5px solid var(--secondary);
 }
 .modal-header, .modal-body {
     padding: 0;
     border: none;
+}
+.thankyou-pop .modal-title {
+    font-size: 2em;
 }
 @media (min-width: 576px) {
     .modal-dialog {
