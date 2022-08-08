@@ -123,15 +123,15 @@
                                 <h4 class="text-primary"><b>Enter Details</b></h4>
                                 <div class="form-row">
                                     <div class="col-12 mb-3">
-                                        <input type="text" class="form-control" placeholder="Full Name" id="" required>
+                                        <input type="text" class="form-control" placeholder="Full Name" id="full_name" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" placeholder="Phone Number" id="" required>
+                                        <input type="text" class="form-control" placeholder="Phone Number" id="contact" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <input type="email" class="form-control" placeholder="Email Address" id="" required>
+                                        <input type="email" class="form-control" placeholder="Email Address" id="email" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -148,6 +148,7 @@
                                 </div>
                                 <p class="text-left line-height-small"><small>I am over 18 years of age, have read and accepted ResMed’s Privacy Notice and Terms of Use, am aware that my personal data will be processed for the purposes outlined in these documents, and agree to ResMed sending me communications, from which I can unsubscribe at any time.</small></p>
                                 <button class="btn btn-primary btn-big" type="submit">Submit</button>
+                                <div class="mt-3 text-primary book_msg d-none"></div>
                             </form>
                             <p class="line-height-small d-none d-md-block"><small>Disclaimer: ResMed Sleep Coaches are sales and customer service representatives who have received training in sleep health. Although  they can give general information about sleep health, sleep disorders and products that may help improve your sleep, they are not qualified healthcare professionals and cannot provide medical advice. We recommend that you consult with your doctor for a broad assessment of your health.  This service is not a substitute for consulting with your doctor.</small></p>
                         </div>
@@ -189,7 +190,8 @@
                         <div class="col-4 pr-mob-0 text-center">
                             <img src="images/Asset-19.png" class="img-fluid drag-img ms-3">
                             <ul class="list-unstyled drag-btn mt-3">
-                                <li class="box_icon draggable_icon tooltip-ui" data-task='bedtime' data-submit="false" tooltip-title="Bedtime">
+                                
+                                <li class="box_icon draggable_icon tooltip-ui required" data-task='bedtime' data-submit="false" tooltip-title="Bedtime">
                                     <img src="images/Asset-36.png" class="img-fluid" data-task='bedtime' data-submit="false">
                                 </li>
                                 <li class="box_icon draggable_icon tooltip-ui" data-task='party' data-submit="false" tooltip-title="Party">
@@ -203,11 +205,12 @@
                                     <img src="images/Asset-31.png" class="img-fluid" data-task='tv-ott'
                                         data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon tooltip-ui" data-task='sleep' data-submit="false" tooltip-title="Sleep">
+                                <li class="box_icon draggable_icon tooltip-ui required" data-task='sleep' data-submit="false" data-toggle="tooltip"
+                                    data-placement="top" title="Sleep">
                                     <img src="images/Asset-34.png" class="img-fluid" data-task='sleep'
                                         data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon tooltip-ui" data-task='dinner' data-submit="false" tooltip-title="Dinner">
+                                <li class="box_icon draggable_icon required tooltip-ui" data-task='dinner' data-submit="false" tooltip-title="Dinner">
                                     <img src="images/Asset-37.png" class="img-fluid" data-task='dinner'
                                         data-submit="false">
                                 </li>
@@ -215,7 +218,7 @@
                                     <img src="images/Asset-33.png" class="img-fluid" data-task='tea'
                                         data-submit="false">
                                 </li>
-                                <li class="box_icon draggable_icon tooltip-ui" data-task='walk' data-submit="false" tooltip-title="Walk">
+                                <li class="box_icon draggable_icon tooltip-ui required" data-task='walk' data-submit="false" tooltip-title="Walk">
                                     <img src="images/Asset-32.png" class="img-fluid" data-task='walk'
                                         data-submit="false">
                                 </li>
@@ -333,10 +336,11 @@
                                     <div class="modal-body">
                                         <form action="" id="subscribe_us_form">
                                             <div class="newsletter-item">
-                                                <input type="email" class="form-control" placeholder="Email Address" id="" required="">
+                                                <input type="email" class="form-control" placeholder="Email Address" id="subscribe_email" required="">
                                                 <button class="btn btn-primary" type="submit">Send</button>
                                             </div>
                                         </form>
+                                        <div class="subscribe_msg mt-3 alert text-primary d-none"></div>
                                     </div>
                                 </div>
                             </div>

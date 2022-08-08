@@ -14,7 +14,18 @@ function touchHandler(event) {
     touch.target.dispatchEvent(simulatedEvent);
     event.preventDefault();
 }
+
+function init() {
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+}    
+    
+    /*----------------------------------------------------------------
+=======
 /*----------------------------------------------------------------
+>>>>>>> 05690c9f58f91c38b47316b2864443fbc0ead1a5
                         Initilize tooltip
     ------------------------------------------------------------------ */
 
@@ -309,6 +320,44 @@ function submit_shedule(){
 
 $("#subscribe_us_form").submit(function(event){
     event.preventDefault();
-    $('#disc-pop').modal('hide');
+    $(".subscribe_msg").removeClass('d-none');
+    let email = $("#subscribe_email").val();
+
+    //check here if email is exist in your databse or not
+
+    let email_already_exist = true;
+
+    if(email_already_exist){
+        $(".subscribe_msg").html('Coupon code already has sended to your email');
+    }else{
+        $(".subscribe_msg").html('Your 40% coupon has been sended to your email.');
+    }
+
+    setTimeout(function(){
+        $(".subscribe_msg").hide('slow');
+    },3000);
+    setTimeout(function(){
+        $('#disc-pop').modal('hide');
+    },4000);
+
     play_thankyou_sound();
-});
+})
+
+
+/*----------------------------------------------------------------
+                Handling booking  Form Submit
+------------------------------------------------------------------ */
+
+$(".main-form").submit(function(event){
+    event.preventDefault();
+    $("#full_name").val('');
+    $("#email").val('');
+    $("#contact").val('');
+    $(".book_msg").removeClass('d-none')
+    $(".book_msg").html('Your 40% coupon has been sended to your email.');
+    setTimeout(function(){
+        $(".book_msg").hide('slow');   
+    },3000)
+})
+
+
