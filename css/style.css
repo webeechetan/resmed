@@ -430,6 +430,9 @@ header {
 .one_star, .two_star, .three_star {
     z-index: 9999;
 }
+.modal-backdrop {
+    z-index: 9999;
+}
 .modal {
     z-index: 99999;
 }
@@ -626,4 +629,71 @@ header {
     from {opacity: 0;}
     50% {opacity: 1;}
     to {transform: translateY(350px);}
+}
+
+/* Define our pulse animation */
+@keyframes pulse {
+    0% {
+        font-size: 100px;
+    }
+    25% {
+        font-size: 200px;
+    }
+    50% {
+        font-size: 100px
+    }
+    75% {
+        font-size: 150px;
+    }
+    100% {
+        font-size: 100px;
+    }
+}
+@keyframes shake {
+    10%, 90% {
+      -webkit-transform: translate3d(-1px, 0, 0);
+              transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      -webkit-transform: translate3d(2px, 0, 0);
+              transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      -webkit-transform: translate3d(-3px, 0, 0);
+              transform: translate3d(-3px, 0, 0);
+    }
+    40%, 60% {
+      -webkit-transform: translate3d(3px, 0, 0);
+              transform: translate3d(3px, 0, 0);
+    }
+} 
+@keyframes button_shadow {
+    10%, 90% {
+        filter: drop-shadow(0,0,0,0.9);
+    }
+    20%, 80% {
+      -webkit-transform: translate3d(2px, 0, 0);
+              transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      -webkit-transform: translate3d(-3px, 0, 0);
+              transform: translate3d(-3px, 0, 0);
+    }
+    40%, 60% {
+      -webkit-transform: translate3d(3px, 0, 0);
+              transform: translate3d(3px, 0, 0);
+    }
+} 
+/* Apply our pulse animation */
+.heart {
+    animation: pulse 1.5s ease-in-out infinite;
+    animation-direction: alternate;
+}
+.shake {
+    animation: shake 1.5s ease-in-out infinite;
+    animation-direction: alternate;
+}
+.start-button .shake {
+    animation: button_shadow 1.5s ease-in-out infinite;
+    animation-direction: alternate;
 }
