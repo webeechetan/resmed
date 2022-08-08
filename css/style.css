@@ -84,7 +84,7 @@ img {
         padding-bottom: 30px;
     }  
     .small, small {
-        font-size: 65%;
+        font-size: 11px;
         font-weight: 500;
     } 
 }
@@ -228,7 +228,15 @@ header {
 .header-title-top {
     line-height: 32px;
 }
+@media (max-width: 767px) {
+    .header-title-top {
+        line-height: 24px;
+    }
+}
 @media (max-width: 575px) {
+    .header-title-top {
+        line-height: 20px;
+    }
     .resmed_logo {
         max-width: 50px;
     }
